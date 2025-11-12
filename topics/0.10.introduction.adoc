@@ -1,0 +1,14 @@
+:imagesdir: ../images
+
+[.columns.is-vcentered]
+== Introduction to AI
+[.column.is_half]
+
+Give a brief introduction on AI and how it has become an essential part of modern software development. Highlight the significance of AI in enhancing productivity, code quality, and innovation.
+
+[.column.is_half]
+
+[.notes]
+--
+_topicStart:Introduction-{day}_
+--

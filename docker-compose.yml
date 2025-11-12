@@ -1,0 +1,30 @@
+services:
+  asciidoctor:
+    image: asciidoctor/docker-asciidoctor:1.33
+    user: 1000:1000
+    volumes:
+      - ".:/documents:Z"
+    command: ./buildscripts/generate-slide-decks.sh ${SLIDE_DECK_DIR:-slide-decks}/${SLIDE_DECK_FILES:-*}.adoc
+  pdf-render:
+    image: openvalue/pdf-tools:latest
+    environment:
+      npm_config_cache: /home/node/.npm/cache 
+      PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
+      PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
+    volumes:
+      - '.:/documents:Z'
+    command: ./buildscripts/convert-revealjs-to-pdf.sh "${PDF_DIR:-pdf-build}" ${SLIDE_DECK_FILES:-*}.html
+    working_dir: /documents
+    profiles:
+      - pdf
+    depends_on:
+      asciidoctor:
+        condition: service_completed_successfully
+  utilities:
+    image: openvalue/pdf-tools:latest
+    volumes:
+      - '.:/documents:Z'
+    working_dir: /documents
+    profiles:
+      - ci
+    command: bash -c "${COMMAND:-exit 1}"

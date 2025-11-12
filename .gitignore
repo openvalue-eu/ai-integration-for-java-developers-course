@@ -1,0 +1,8 @@
+out/
+.idea/
+*.iml
+pdf/
+pdf-build/
+.DS_Store
+generated
+**/.DS_Store

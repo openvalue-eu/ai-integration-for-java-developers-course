@@ -1,0 +1,23 @@
+subject: OpenValue wiki account for the CPSA-F software architecture training
+
+
+
+Hi $voornaam,
+
+I've created an account for you for the OpenValue iSAQB wiki.
+On this wiki, you can find the planning and all material for the training. You will also use this wiki to document the results of the exercises we will work on during the training.
+
+You can log in to the wiki with the following details:
+
+URL: https://wiki.openvalue.dev
+Username: $email
+Password: $password
+
+Please make sure you can log in to the wiki at least one day before the start of the training.
+If you have trouble logging in to the wiki, let me know.
+
+See you next week!
+
+regards,
+Bert Jan
+

@@ -1,0 +1,26 @@
+:includedir: ../topics
+:docinfo: shared
+:day: 1
+
+include::{includedir}/0.01.welcome.adoc[]
+
+include::{includedir}/0.02.energizer.adoc[]
+
+== Day 1: AI-Assisted Development and Integration Fundamentals
+
+== Today's Agenda
+* Module 1: The Evolution of AI in Software Development
+* Module 2: GitHub Copilot Deep Dive
+* Module 3: Code Review, Refactoring & Testing with AI
+* Module 4: AI Fundamentals for Java Developers
+* Module 5: Building Your First AI-Enhances Java Application
+
+include::{includedir}/0.10.introduction.adoc[]
+
+include::{includedir}/LG01.10.module-1.adoc[]
+include::{includedir}/LG01.20.module-2.adoc[]
+include::{includedir}/LG01.30.module-3.adoc[]
+include::{includedir}/LG01.40.module-4.adoc[]
+include::{includedir}/LG01.50.module-5.adoc[]
+
+

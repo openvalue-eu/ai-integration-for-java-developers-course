@@ -1,0 +1,11 @@
+:imagesdir: ../images
+:module: 4
+
+[.columns.is-vcentered]
+== Module {module}
+[.column.is_half]
+
+[.notes]
+--
+_topicStart:Module-{module}_
+--

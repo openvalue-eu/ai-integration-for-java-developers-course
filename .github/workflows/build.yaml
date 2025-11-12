@@ -1,0 +1,43 @@
+name: build
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+jobs:
+  build-slide-decks:
+    name: Build revealjs slide decks as HTML and PDF
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Fix permissions for actions runner
+        run: chmod -R 777 pdf-renderer/ 
+      - name: Generate revealjs slides and PDFs
+        run: ./build-slides-release.sh
+      - name: Pack slides and PDFs
+        run: |
+          mv out/ html/
+          zip -r material.zip html/ pdf/
+      - name: Create material artifact for release
+        uses: actions/upload-artifact@v4
+        with:
+          name: material
+          path: material.zip
+  create-release:
+    name: Create material release
+    needs: build-slide-decks
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download material artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: material
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        if: github.ref == 'refs/heads/main'
+        with:
+          files: material.zip
+          tag_name: v${{ github.run_number }}

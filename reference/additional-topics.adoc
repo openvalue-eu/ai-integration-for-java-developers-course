@@ -1,0 +1,5 @@
+# List of Additional Topics offered on top of iSAQB material
+
+* Architecture Decision Records
+* Residuality Theory
+*

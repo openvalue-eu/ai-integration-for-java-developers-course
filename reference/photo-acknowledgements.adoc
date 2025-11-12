@@ -1,0 +1,36 @@
+# Photos used in the CPSA-F course material
+:imagesdir: ../images
+
+image::energizer-photo.jpg["Photo by Husna Miskandar on Unsplash"]
+
+image::welcome.jpg["Photo by Belinda Fewings on Unsplash", height=800]
+
+image::dartboard.jpg["Photo by Afif Ramdhasuma on Unsplash", height=600]
+
+image::learn.jpg[height=800, "Photo by Kelly Sikkema on Unsplash"]
+
+image::stand-out.jpg[height=700, "Photo by Aziz Acharki on Unsplash"]
+
+image::choose-game.jpg["Photo by Brett Jordan on Unsplash", width=700]
+
+image::hand-lightbulb.jpg["Photo by Júnior Ferreira on Unsplash", width=500]
+
+image::gothic-architecture-1.jpg["Photo by Danyu Wang on Unsplash"]
+
+image::great-pyramid.jpg["Photo by Ahmed Afifi on Unsplash"]
+
+image::rough-stone-castle.jpg["Photo by Tim Rebkavets on Unsplash"]
+
+image::cathedral.jpg["Photo by Robert Thiemann on Unsplash"]
+
+image::design-diagram.jpg["Photo by Kelly Sikkema on Unsplash"]
+
+image::sagrada-stained-glass-window.jpg["Photo by Pier Luigi Valente on Unsplash"]
+
+image::team.jpg["Photo by Cherrydeck on Unsplash"]
+
+image::empty-notebook.jpg["Photo by Mike Tinnion on Unsplash"]
+
+image::up-and-down.jpg["Photo by Susan Q Yin on Unsplash"]
+
+image::surprises.jpg["Photo by Roger Bradshaw on Unsplash"]

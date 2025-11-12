@@ -1,0 +1,51 @@
+Hi allen,
+
+Over twee weken (op donderdag 20 april) starten we met de training Certified Professional for Software Architecture. In vier dagen verspreid over 4 weken zullen we gezamenlijk door de theorie heen gaan, oefenen met een aantal cases uit de praktijk en onderling onze kennis en ervaring delen, waarbij uiteraard software architectuur centraal staat.
+Jan-Hendrik Kuperus (janhendrik@yoink.nl) zal de training geven; ik ben er op de eerste dag ook bij voor de introductie van de case waar jullie tijdens de training aan gaan werken.
+Deze mail bevat wat informatie over de training en een tweetal verzoeken voor je.
+
+Materiaal en Wiki
+Het materiaal dat we beschikbaar stellen voor de training bestaat uit slides, opgaven rondom een case en een boek (als naslagwerk). Al het materiaal is beschikbaar via een wiki en op dezelfde wiki gaan we de uitwerkingen van de opdrachten vastleggen waar jullie gedurende de training aan werken.
+OpenValue stelt het trainingsmateriaal beschikbaar onder de voorwaarde dat je dit voor jezelf gebruikt en niet deelt met anderen buiten Sogeti. Het is in ieder geval niet de bedoeling dat je het materiaal gebruikt om er zelf training mee te gaan geven ;-)
+Omdat het trainingsmateriaal een belangrijke asset is van OpenValue, vragen we om deze voorwaarde te formaliseren via een reply op deze mail. Zou je daarom op deze mail aan Bert Jan (bertjan@openvalue.nl) willen antwoorden met:
+"Ik ga akkoord met de voorwaarden voor het OpenValue iSAQB materiaal, ik zal het materiaal alleen voor eigen gebruik inzetten en niet buiten Sogeti delen."
+Graag ontvang ik dit uiterlijk volgende week vrijdag 14 april van je, zodat we voor iedereen tijdig een wiki-account voor de training kunnen aanmaken.
+
+Leerdoelen
+De training is gebaseerd op het officiële curriculum opgesteld door de iSAQB voor CPSA-F (Certified Professional for Software Architecture, foundation level).
+Alle leerdoelen vind je hier: https://isaqb-org.github.io/curriculum-foundation/curriculum-foundation-en.html.
+Buiten deze officiële leerdoelen willen we ook - waar mogelijk - ingaan op jullie persoonlijke verwachtingen en leerdoelen t.a.v. deze training.
+
+Kun je mij daarom via mail (uiterlijk volgende week vrijdag, 14 april) het volgende laten weten:
+- Wat zijn je verwachtingen van deze training?
+- Welke persoonlijke leerdoelen heb je (wat zou je willen leren?)
+- Op welke leerdoelen van het curriculum (zie de URL hierboven) wil je dat we extra focussen tijdens de training?
+- Mis je misschien iets bij de officiële leerdoelen wat je wel had verwacht?
+- Wat is je huidige kennis en ervaring op het gebied van software architectuur?
+
+Planning
+De training zal plaatsvinden bij Sogeti op kantoor in Vianen op de volgende 4 dagen:
+- Donderdag 20 april: Creation Zone 0 Rood, Vianen
+- Woensdag 26 april: Auditorium, Vianen (tot 15:00) Parijs 2 Rood (Vanaf 15:00)
+- Woensdag 3 mei: Boardroom 2 Rood, Vianen
+- Dinsdag 9 mei: Parijs 2 Rood, Vianen
+
+De indeling van de trainingsdagen zal er ongeveer als volgt uitzien:
+- 8:45 - 9:00: inloop, koffie/thee
+- 9.00: Aanvang ochtendsessie
+- 12:30: Lunch
+- 13:15: Aanvang middagsessie
+- 17.00: Einde
+
+Het trainingsmateriaal bevat een aantal opdrachten waar we tijdens de sessies in groepen aan werken. Er is geen huiswerk voor de training. Het is wel aan te raden om voor het examen te studeren. Na de training doe je examen voor het certificaat "Certified Professional for Software Architecture". Dit is een remote examen dat 90 minuten duurt. Tijdens de training gaan we hier nader op in. De datum voor het examen plannen we samen op de eerste dag.
+
+Tot slot
+Dat was het voor nu. Jan-Hendrik en ik kijken er naar uit om samen met jullie de training te gaan doen!
+Mocht je naar aanleiding van deze mail nog vragen hebben, neem dan gerust even contact met me op via bertjan@openvalue.nl.
+
+Voor de volledigheid, graag ontvang ik uiterlijk vrijdag 14 april via een reply op deze mail van je:
+1. Akkoord op de voorwaarden voor het gebruiken van ons materiaal zoals hierboven beschreven onder "Materiaal en Wiki"
+2. Antwoord op de vragen hierboven onder "Leerdoelen"
+
+groeten en tot de 20e!
+Bert Jan en Jan-Hendrik

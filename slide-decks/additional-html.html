@@ -1,0 +1,20 @@
+<!-- start of additional-html.html -->
+<!-- This file will be injected at the bottom of each generated slide deck. -->
+<!-- This is a footer that's added to all PDF slide pages. -->
+<script>
+    // Inject a footer on all PDF pages
+    const footer = document.createElement('footer');
+    footer.innerHTML = '<div class="isaqb-logo-footer-pdf"><img src="images/logo-isaqb-large.png"></div>'
+
+    const watermark = document.createElement('div');
+    watermark.innerHTML = '<div class="watermark-print"><div class="watermark-print-inner">&copy; OpenValue 2019-2025. All rights reserved.</div></div>'
+
+    Reveal.on('pdf-ready', () => {
+        document.querySelectorAll('.pdf-page').forEach(page => {
+            page.appendChild(footer.cloneNode(true));
+
+            page.appendChild(watermark.cloneNode(true));
+        });
+    });
+</script>
+<!-- end of additional-html.html -->

@@ -1,0 +1,17 @@
+:includedir: ../topics
+:docinfo: shared
+:day: 2
+
+include::{includedir}/0.01.welcome.adoc[]
+
+include::{includedir}/0.02.energizer.adoc[]
+
+== Day 2: Advanced AI Integration and Production Patterns
+
+== Today's Agenda
+* Module 6: Cloud AI Services Integration
+* Module 7: Building RAG Systems with Java
+* Module 8: Local Model Deployment and Optimization
+* Module 9: Testing, Validation & Cost Optimization
+* Module 10: Ethics & Best Practices
+* Module 11: Final Workshop - AI Enhancement Project

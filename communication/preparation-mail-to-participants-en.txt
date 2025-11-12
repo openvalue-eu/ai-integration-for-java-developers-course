@@ -1,0 +1,52 @@
+Hi everyone,
+
+In about two weeks from now (on Monday, November 13th), we will start with the training “Certified Professional for Software Architecture”.
+In four days, spread over 4 weeks, we will dive into theory together, practice with practical cases and share our knowledge and experience around software architecture together.
+Jan-Hendrik Kuperus (janhendrik@yoink.nl) will be your trainer; I will join on the first day to introduce the case that you will work on during the training.
+This e-mail contains information about the training and two requests for you.
+
+Material and Wiki
+The material that we provide for the training consists of presentation slides, assignments around a case and a book (for reference and as an exam study guide). All the material is available via a Wiki, and we’ll use the same Wiki to document the results of the assignments you’ll work on during the training. OpenValue provides the training material on the condition that you’ll use it for yourself and will not share it with others outside Planon. In any case, you are not allowed to use the material to give training yourself ;-)
+
+Because the training material is an important asset for OpenValue, we ask that you formalize this condition by replying to this email. Please respond to this email to Bert Jan (bertjan@openvalue.nl), stating:
+"I agree to the terms and conditions for the OpenValue iSAQB material, I will only use the material for myself and will not share it outside Planon."
+I would like to receive this from you latest on next Monday, November 6th, so that we can create a Wiki account for the training for everyone in time.
+
+Learning goals
+The training is based on the official curriculum maintained by the iSAQB for CPSA-F (Certified Professional for Software Architecture, foundation level).
+All learning objectives can be found here: https://isaqb-org.github.io/curriculum-foundation/curriculum-foundation-en.html.
+In addition to these official learning objectives, we also want to do our best - where possible - to fulfil your personal expectations and learning objectives for this training.
+
+Can you please let me know the following by email (no later than next Monday, November 6th):
+- What are your expectations from this training?
+- What personal learning goals do you have (what would you like to learn?)
+- Which learning objectives of the curriculum (see the URL above) do you want us to put extra focus on during the training?
+- Are you missing anything in the official learning objectives that you expected?
+- What is your current knowledge and experience in the field of software architecture?
+
+Schedule
+The training will take place at the Planon office in Nijmegen on the following 4 days:
+- Monday, November 13th
+- Monday, November 20th
+- Monday, November 27th
+- Monday, December 4th
+
+Global schedule for the training days:
+- 8:45 - 9:00: walk-in, coffee/tea
+- 9.00: Start of morning session
+- 12:30: Lunch
+- 13:15: Start of afternoon session
+- 17:00: End
+
+The training material contains several assignments that we’ll work on in groups during the sessions. There is no homework for the training, but it is advisable to study for the exam. After the training, you will take an exam for the "Certified Professional for Software Architecture" certificate. This is a remote exam that lasts 90 minutes. We will discuss this in more detail during the training. We’ll plan the date(s) for the exam together on the first day.
+
+Finally
+That's it for now. Jan-Hendrik and I are looking forward to meeting you at the training!
+If you have any questions regarding this email, please contact me at bertjan@openvalue.nl.
+
+As a reminder, I would like to receive a reply to this email from you latest on Monday, November 6th, with:
+1. Agreement to the terms and conditions for using our material as described above under "Material and Wiki”.
+2. Answer to the questions above under "Learning goals”.
+
+See you on the 13th!
+Bert Jan and Jan-Hendrik
