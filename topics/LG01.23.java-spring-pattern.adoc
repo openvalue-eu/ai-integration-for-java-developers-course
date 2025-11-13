@@ -1,0 +1,144 @@
+== Topic 3: Java and Spring Boot Development Patterns
+
+=== Generating Entity Classes
+
+[.notes]
+--
+**Instructor Notes:** Show live generation of JPA entity with relationships.
+
+**Key Points to Cover:**
+[%step]
+--
+- Basic entity structure with @Entity, @Table
+- Primary keys and generation strategies
+- Relationships: @OneToMany, @ManyToOne, @ManyToMany
+- Auditing fields (@CreatedDate, @LastModifiedDate)
+- Lombok annotations integration
+--
+**Demo Example:**
+```
+// Create JPA entity for Product
+// Fields: id (Long), name (String), price (BigDecimal), category (Category enum)
+// Include created/updated timestamps
+// Use Lombok @Data and @Entity annotations
+```
+--
+=== Repository Layer
+[.notes]
+--
+**Instructor Notes:** Show Spring Data JPA custom query generation.
+
+**Key Points to Cover:**
+[%step]
+--
+- Extending JpaRepository<T, ID>
+- Method name query derivation
+- @Query annotations with JPQL
+- Native queries when needed
+- Pagination and sorting
+--
+**Demo Example:**
+```
+// Create repository interface for Product entity
+// Add method to find products by price range
+// Add method to find top 10 products by category ordered by price
+```
+--
+=== Service Layer Implementation
+[.notes]
+--
+**Instructor Notes:** Demonstrate business logic with dependency injection and transaction management.
+
+**Key Points to Cover:**
+[%step]
+--
+- @Service annotation
+- Constructor injection (preferred over field injection)
+- @Transactional boundaries
+- Exception handling strategies
+- DTO mapping (Entity ↔ DTO)
+--
+**Demo Example:**
+```
+// Create ProductService with dependency on ProductRepository
+// Implement method to create product with validation
+// Throw ProductAlreadyExistsException if duplicate name
+// Use @Transactional annotation
+```
+--
+=== REST Controller Generation
+[.notes]
+--
+**Instructor Notes:** Show full CRUD controller with proper HTTP status codes and error handling.
+
+**Key Points to Cover:**
+[%step]
+--
+- @RestController and @RequestMapping
+- HTTP methods: @GetMapping, @PostMapping, @PutMapping, @DeleteMapping
+- @RequestBody and @PathVariable
+- @Valid for validation
+- ResponseEntity for status control
+- Exception handling with @ExceptionHandler
+--
+**Demo Example:**
+```
+// Create REST controller for Product management
+// Include endpoints: GET all, GET by id, POST create, PUT update, DELETE
+// Return appropriate HTTP status codes
+// Include OpenAPI/Swagger annotations
+```
+--
+=== Exception Handling
+[.notes]
+--
+**Instructor Notes:** Show global exception handler pattern.
+
+**Key Points to Cover:**
+[%step]
+--
+- @ControllerAdvice for global handling
+- Custom exception classes
+- Error response DTOs
+- Logging exceptions
+- Returning appropriate status codes
+--
+--
+=== Testing with Copilot
+[.notes]
+--
+**Instructor Notes:** Demonstrate unit and integration test generation. Emphasize reviewing test quality.
+
+**Key Points to Cover:**
+[%step]
+--
+- JUnit 5 test structure
+- Mockito for mocking dependencies
+- @SpringBootTest for integration tests
+- @MockBean in Spring context
+- Arrange-Act-Assert pattern
+- Edge cases and negative scenarios
+--
+**Demo Example:**
+```
+// Generate unit test for ProductService.createProduct
+// Mock ProductRepository
+// Test cases: success, duplicate name, invalid price
+// Use AssertJ for assertions
+```
+--
+=== Configuration and Properties
+[.notes]
+--
+**Instructor Notes:** Show application.yml generation for Spring Boot.
+
+**Key Points to Cover:**
+[%step]
+--
+- Database configuration
+- Server port and context path
+- JPA/Hibernate properties
+- Logging configuration
+- Profile-specific configurations
+--
+--

@@ -1,0 +1,100 @@
+== Topic 2: Effective Prompting Techniques
+
+=== Comment-Driven Development
+[.notes]
+--
+**Instructor Notes:** Demonstrate live. Show how comment quality affects suggestion quality.
+
+**Key Principles:**
+[%step]
+--
+- Write clear, specific comments describing intent
+- Include input/output examples
+- Specify error handling requirements
+- Mention framework/library preferences (Spring, JPA, etc.)
+--
+**Example:**
+```
+// Create a method to calculate compound interest
+// Parameters: principal (double), rate (double), time (int), frequency (int)
+// Returns: final amount as BigDecimal
+// Handle negative values by throwing IllegalArgumentException
+```
+--
+=== Context Matters: File and Project Context
+[.notes]
+--
+**Instructor Notes:** Show how Copilot uses surrounding code. Open multiple related files.
+
+**Key Points to Cover:**
+[%step]
+--
+- Copilot analyzes current file
+- Scans open tabs for context
+- Understands project structure
+- Recognizes frameworks (Spring Boot, Hibernate)
+- Adapts to coding style
+--
+--
+=== Prompt Patterns for Java Development
+[.notes]
+--
+**Instructor Notes:** Provide template patterns participants can reuse. Show before/after examples.
+
+**Common Patterns:**
+
+**CRUD Operations:**
+```
+// Create a JPA repository method to find all users by email domain
+// Return List<User>, parameter: String emailDomain
+```
+
+**REST Controllers:**
+```
+// Create Spring REST controller endpoint for POST /api/orders
+// Accepts OrderRequest DTO, returns OrderResponse
+// Include validation and error handling
+```
+
+**Service Layer:**
+```
+// Implement service method to process payment transaction
+// Use PaymentGateway interface, handle timeout exceptions
+// Log all transactions, return TransactionResult
+```
+--
+=== Iterative Refinement
+[.notes]
+--
+**Instructor Notes:** Demonstrate accepting partial suggestion, then refining with additional prompts.
+
+**Key Technique:**
+[%step]
+--
+1. Accept initial Copilot suggestion
+2. Add refinement comment above
+3. Let Copilot adjust implementation
+4. Repeat until satisfactory
+--
+**Example Refinement:**
+```
+// Also add caching using Spring @Cacheable
+// Cache key should be userId + dateRange
+```
+--
+=== Discussion: Prompt Engineering Challenges
+[.notes]
+--
+**Instructor Notes:** 5 min discussion. Collect examples of prompts that didn't work well.
+
+**Discussion Prompt:**
+"What makes a prompt too vague vs. too specific? How do you find the balance?"
+
+**Common Concerns to Address:**
+[%step]
+--
+- "Copilot suggests wrong framework?" - Be explicit in comments (e.g., "using Spring Data JPA")
+- "Getting generic code?" - Add more context, specify constraints
+- "Suggestions don't match our style?" - Copilot learns from surrounding code
+--
+--

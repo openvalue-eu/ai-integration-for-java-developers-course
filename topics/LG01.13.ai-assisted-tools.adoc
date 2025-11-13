@@ -1,0 +1,116 @@
+== Topic 3: Overview of AI-Assisted Development Tools
+
+=== Tool Landscape
+[.notes]
+--
+**Instructor Notes:** Show tool categories. Explain different tools solve different problems.
+
+**Key Categories:**
+[%step]
+--
+- Code generation & completion
+- Code review & quality
+- Testing & test generation
+- Documentation & knowledge
+--
+--
+=== Code Generation Tools
+[.notes]
+--
+**Instructor Notes:** Highlight Copilot as next module's focus. Mention alternatives and their differentiators.
+
+**Key Tools:**
+[%step]
+--
+- GitHub Copilot (most popular, Codex-based)
+- Tabnine (privacy-focused, on-premise)
+- Amazon CodeWhisperer (AWS integration)
+- Cursor (AI-first IDE)
+--
+--
+=== Code Review & Quality Tools
+[.notes]
+--
+**Instructor Notes:** Explain how these differ from traditional static analysis - they learn patterns, not just check rules.
+
+**Key Tools:**
+[%step]
+--
+- DeepCode/Snyk (security vulnerabilities)
+- Amazon CodeGuru (performance + AWS best practices)
+- CI/CD pipeline integration
+--
+--
+=== Testing Tools
+[.notes]
+--
+**Instructor Notes:** Show how AI generates meaningful tests, not just templates. Understands code semantics.
+
+**Key Tools:**
+[%step]
+--
+- Diffblue Cover (automated unit tests for Java)
+- Applitools (visual regression testing)
+- Edge case generation
+--
+--
+=== Documentation Tools
+[.notes]
+--
+**Instructor Notes:** Explain automation of tedious documentation work.
+
+**Key Tools:**
+[%step]
+--
+- Copilot/CodeWhisperer for Javadoc
+- Automated architecture docs
+- Natural language code search
+--
+--
+=== Demo: GitHub Copilot in Action
+[.notes]
+--
+**Instructor Notes:** 5-7 min live demo in IntelliJ with Spring Boot project.
+
+**Demo Steps:**
+[%step]
+--
+1. Comment-driven development: write service method comment, show suggestion
+2. Generate unit test for the method
+3. Generate Javadoc comments
+4. Refactor for readability
+--
+--
+=== Tool Selection Criteria
+[.notes]
+--
+**Instructor Notes:** Help participants think through what matters for their organization.
+
+**Key Factors:**
+[%step]
+--
+- Security/compliance (code privacy)
+- Integration with existing toolchain
+- Learning curve and team readiness
+- Cost vs. value (ROI)
+- Deployment model (cloud vs. on-premise)
+--
+--
+=== Discussion: Selection Strategy
+[.notes]
+--
+**Instructor Notes:** 2-3 min discussion. Address common concerns proactively to remove adoption barriers.
+
+**Discussion Prompt:**
+"What factors are most important for your organization? What concerns might prevent AI tool adoption?"
+
+**Common Concerns to Address:**
+[%step]
+--
+- **Security:** "Will our code leave the organization?" - Depends on tool, some offer on-premise (Tabnine)
+- **Cost:** "Too expensive for large teams?" - Pilot first, measure ROI
+- **Integration:** "Will it work with our stack?" - Check compatibility before commitment
+- **Resistance:** "AI will replace developers?" - Augmentation not replacement, creates new opportunities
+- **Quality:** "Can we trust AI suggestions?" - Always review, use as assistant not authority
+--
+--

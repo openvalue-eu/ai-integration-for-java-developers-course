@@ -1,40 +1,39 @@
-== Module 1: The Evolution of AI in Software Development
-:imagesdir: ../images
+= Module 1: AI-Assisted Development Fundamentals
 :module: 1
 
 [.notes]
 --
-_topicStart:Module-{module}-day-{day}_
+_topicStart:Module-{module}-Day-{day}_
 --
 
-[.notes]
---
-Instructor: set the stage — this module explains *why* AI-assisted development exists and *how* the developer’s role is evolving.
---
+== Module 1: AI-Assisted Development Fundamentals
+
+Duration: 1 hour
 
 === Learning Objectives
-* Trace the historical shift from automation → augmentation → intelligent collaboration.
-* Recognize how AI changes the developer’s role in modern software teams.
-* Identify the main categories of AI-assisted tools available today.
-* Appreciate both the productivity gains and limitations of AI co-development.
 
-=== Agenda
-1. Brief history of automation in software engineering
-2. The rise of AI-augmented tools
-3. AI-assisted development landscape (2025 snapshot)
-4. The evolving developer role
-5. Discussion and demo
-
+* Trace AI evolution from automation to generative AI
+* Understand ML fundamentals for Java developers
+* Identify appropriate AI tools for specific tasks
+* Recognize AI limitations and pitfalls
+* Evaluate when to use AI vs. traditional approaches
 
 include::LG01.11.evolution-of-ai.adoc[]
-[%step]
+include::LG01.12.ai-fundamentals.adoc[]
+include::LG01.13.ai-assisted-tools.adoc[]
 
-include::LG01.12.rise-of-ai-assistance.adoc[]
-[%step]
+== Module Summary
 
-include::LG01.13.developer-role-evolution.adoc[]
-[%step]
+**Instructor Notes:** Reinforce key message - AI augments, not replaces developers (Copilot, not Autopilot). Sets up next module's hands-on work.
 
-include::LG01.14.automation-to-augmentation-shift.adoc[]
+**Key Takeaways:**
 [%step]
+--
+- AI evolved from rule-based to pattern-learning systems
+- LLMs enable contextual code generation
+- Must understand limitations for safe usage
+- Different tools for different tasks
+- Selection depends on organizational context
+--
 
+**Next:** Hands-on GitHub Copilot deep dive

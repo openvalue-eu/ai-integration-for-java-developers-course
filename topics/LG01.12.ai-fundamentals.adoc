@@ -1,0 +1,95 @@
+== Topic 2: AI/ML Fundamentals for Java Developers
+
+=== Paradigm Shift: Deterministic vs. Machine Learning
+[.notes]
+--
+**Instructor Notes:** Use familiar Java if/else example. Contrast with learning from examples.
+
+**Key Points to Cover:**
+[%step]
+--
+- Traditional: explicit rules (if/else logic)
+- Machine Learning: learning patterns from examples
+- Example: spam detection (rules vs. learning)
+--
+--
+=== Types of AI
+[.notes]
+--
+**Instructor Notes:** Give a quick rundown of AI categories and comparing them. How the types of AI is grouped by capabilities and functionalities.
+
+**Key Points to Cover:**
+[%step]
+--
+- AI by Capabilities:
+** Narrow AI: specific tasks (e.g., code completion)
+** General AI: human-like intelligence (future goal)
+** Superintelligent AI: surpass human intelligence (theoretical)
+- AI by Functionalities:
+** Reactive Machines (Narrow AI): no memory, respond to current input (e.g., chess AI)
+** Limited Memory (General AI): use past data for decisions (e.g., self-driving cars)
+** Theory of Mind: understand emotions, beliefs (research stage)
+** Self-Aware (Super AI): possess self-consciousness (theoretical)
+--
+--
+=== Three Types of Machine Learning
+[.notes]
+--
+**Instructor Notes:** Use development-relevant examples for each type.
+
+**Key Points to Cover:**
+[%step]
+--
+- **Supervised:** Labeled data (Copilot: comments→code)
+- **Unsupervised:** Find patterns (code smell detection)
+- **Reinforcement:** Trial/error with feedback (build optimization)
+--
+--
+=== Large Language Models (LLMs)
+[.notes]
+--
+**Instructor Notes:** Explain at high level how LLMs generate contextually appropriate code. Show transformer architecture diagram (no math).
+
+**Key Points to Cover:**
+[%step]
+--
+- Trained on massive text/code datasets
+- Predict next likely token based on context
+- Dual training: natural language + programming
+- Transformer architecture with attention mechanism
+- Why it works: learned statistical patterns
+--
+--
+=== Critical AI Limitations
+
+[.notes]
+--
+**Instructor Notes:** Emphasize this is most important concept for safe usage. Use examples of confident but incorrect AI suggestions.
+
+**Key Points to Cover:**
+[%step]
+--
+- Probabilistic, not logical reasoning
+- Can confidently generate buggy/insecure code
+- Limited by training data
+- No awareness of your production constraints
+- Always review and test AI-generated code
+--
+--
+
+=== Discussion: Where Can AI Help?
+[.notes]
+--
+**Instructor Notes:** Connect ML concepts to daily work. Expected insights: AI good at boilerplate, struggles with novel business logic.
+
+**Discussion Prompt:**
+"Where do you spend time: boilerplate, business logic, debugging, refactoring? Which would AI help most with based on how it works?"
+
+**Common Concerns to Address:**
+[%step]
+--
+- "Why can't AI handle complex business logic?" - Limited by training data patterns
+- "Is AI just guessing?" - Yes, probabilistic predictions based on learned patterns
+- "When should we not use AI?" - Novel problems, security-critical code without review
+--
+--

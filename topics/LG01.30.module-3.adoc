@@ -1,16 +1,56 @@
-:imagesdir: ../images
-:module: 3
+= Module 3: Practical Exercises - AI-Assisted Code Review, Refactoring, and Testing
 
-[.columns.is-vcentered]
-== Module {module}: Code Review, Refactoring & Testing with AI
-[.column.is_half]
+== Module 3: Practical Exercises
 
-include::LG01.32.ai-code-review.adoc[]
-include::LG01.33.ai-test-generation.adoc[]
-include::LG01.34.integration-in-refactoring.adoc[]
-include::LG01.36.limitations-of-ai.adoc[]
+Duration: 1.5 hours
 
+=== Learning Objectives
+
+* Use AI tools for code review and quality analysis
+* Apply AI-assisted refactoring techniques
+* Generate and optimize test cases with AI
+* Evaluate AI suggestions critically
+* Integrate AI tools into existing workflows
+
+== Module Summary
 [.notes]
 --
-_topicStart:Module-{module}-day-{day}_
+**Instructor Notes:** Recap practical skills learned. Set context for next module.
+--
+**Key Takeaways:**
+[%step]
+--
+- AI accelerates code review, refactoring, testing
+- Always critically evaluate AI suggestions
+- Test-driven discipline still essential
+- AI is productivity tool, not replacement for expertise
+- Integration requires team standards and governance
+--
+
+**Skills Practiced:**
+[%step]
+--
+- ✓ AI-assisted code review
+- ✓ Refactoring with AI guidance
+- ✓ Test generation and TDD with AI
+- ✓ Critical evaluation of AI output
+- ✓ Workflow integration
+--
+
+**Best Practices Reinforced:**
+[%step]
+--
+- Incremental refactoring
+- Test after each change
+- Comprehensive test coverage
+- Code review discipline
+- Documentation standards
+--
+
+**Next Module:** AI fundamentals for Java developers and Java AI libraries overview
+
+=== Q&A
+[.notes]
+--
+**Instructor Notes:** 5 min for questions. Address concerns about real-world adoption and team dynamics.
 --

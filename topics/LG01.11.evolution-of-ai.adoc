@@ -1,62 +1,71 @@
-:imagesdir: ../images
+== Topic 1: Evolution of AI in Software Development
 
-== From Automation to Augmentation
+=== Automation: Era before AI (1990s-2010s)
 
 [.notes]
 --
-_topicStart:Module-{module}-Evolution-of-AI_
+**Instructor Notes:** Show timeline of tool evolution. Explain how basic autocomplete worked through text matching, no intelligence involved.
+
+**Key Points to Cover:**
+[%step]
+--
+- IDE autocomplete: mechanical text matching
+- Static analysis tools: rule-based, predefined patterns
+- Limitation: couldn't learn or adapt
+--
 --
 
-[.columns.is-vcentered]
-=== Automation: The Era Before AI
-[.column]
+=== Augmentation: The rise of AI and Machine Learning (~2020)
+
+[.notes]
 --
-Before the advent of sophisticated AI, Java development was largely a manual process. Developers relied heavily on their own knowledge, experience, and traditional tools. This era was characterized by:
+**Instructor Notes:** Explain what changed - massive datasets, computing power, neural network breakthroughs enabled learning from patterns.
 
-* Content:
-** Focused on repetitive automation — CI/CD, static analysis, testing tools.
-** Tools followed deterministic rules.
-** Developer’s job: define logic, enforce consistency.
-
-While IDEs significantly improved productivity, they were primarily syntax-aware. They could identify syntax errors and suggest basic code completions, but lacked the ability to understand the overall context of the project or provide intelligent recommendations based on the developer's intent.
+**Key Points to Cover:**
+[%step]
 --
-
-[.columns.is-vcentered]
-=== Augmentation: Emergence of AI
-[.column]
+- Training on billions of lines of code
+- Pattern learning vs. rule execution
+- GitHub Copilot (2021): first mainstream AI pair programmer
+- Powered by OpenAI Codex
 --
-The initial foray of AI into Java development brought about a new level of automation and assistance.
-
-* Content:
-** AI was mainly data driven, leveraging large codebases.
-** Machine learning models entered build, test, and deployment pipelines.
-** Early AI tools: code completion, bug prediction, pattern detection.
-** AI-assisted development begins, but still reactive.
-
-This era marked a significant step forward, but AI assistance was still largely limited to syntax-level analysis and basic automation. The tools lacked a deep understanding of the project's context, business logic, or the developer's intent.
 --
 
-[.columns.is-vcentered]
-=== Collaboration: AI as a Co-Developer
-[.column]
+=== Collaboration: Present Day (2024)
+
+[.notes]
 --
-The current era represents a paradigm shift in AI assistance, characterized by context awareness and a collaborative relationship between AI and developers. This era is driven by advancements in:
+**Instructor Notes:** Show breadth of AI across SDLC. Emphasize paradigm shift from deterministic to probabilistic.
 
-* Content:
-** AI acts as a co-developer who generates, refactors, and tests code.
-** Developers interact through conversation and reasoning, not just commands.
-
-In this era, AI is no longer just a tool for automating tasks; it has become a co-developer, working alongside humans to build software more efficiently and effectively.
+**Key Points to Cover:**
+[%step]
+--
+- AI in code generation, review, testing, documentation
+- Probabilistic predictions vs. deterministic logic
+- Key limitation: AI suggests likely code, not guaranteed correct
+- Still requires human review and testing
+--
 --
 
-[.columns.is-vcentered]
-=== What Has Changed?
-[.column]
---
-Explain how AI assistance transformed from syntax suggestions to complex problem-solving and creative tasks. This can best be done by highlighting the key shifts in AI capabilities and developer interactions over time.
+=== Common Misconceptions
+* AI "understands" code like humans do (it doesn't - it's pattern matching)
+* AI is always correct if it sounds confident
+* AI can replace domain expertise
 
-* Content:
-** **Shift in input** – deterministic rules → learned models → context-aware prompts
-** **Shift in output** – static results → adaptive suggestions → interactive co-generation
-** **Shift in workflow** – isolated tools → integrated copilots → autonomous agents
+=== Discussion: Your Experience
+
+[.notes]
+--
+**Instructor Notes:** Facilitate 3-5 min discussion. Ask about tedious tasks where AI could help.
+
+**Discussion Prompt:**
+"How has your development workflow evolved? What tasks are most tedious where AI assistance would be valuable?"
+
+**Common Concerns to Address:**
+[%step]
+--
+- "Will AI replace developers?" - No, it augments capabilities
+- "Can we trust AI suggestions?" - Always review and test
+- Job security fears - AI creates new opportunities
+--
 --
