@@ -2,10 +2,10 @@
 :module: 2
 
 [.columns.is-vcentered]
-== Module {module}
+== Module {module}: GitHub Copilot Deep Dive
 [.column.is_half]
 
 [.notes]
 --
-_topicStart:Module-{module}_
+_topicStart:Module-{module}-day-{day}_
 --
