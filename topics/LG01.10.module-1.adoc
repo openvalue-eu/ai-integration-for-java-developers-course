@@ -1,11 +1,40 @@
+== Module 1: The Evolution of AI in Software Development
 :imagesdir: ../images
 :module: 1
 
-[.columns.is-vcentered]
-== Module {module}
-[.column.is_half]
+[.notes]
+--
+_topicStart:Module-{module}-day-{day}_
+--
 
 [.notes]
 --
-_topicStart:Module-{module}_
+Instructor: set the stage — this module explains *why* AI-assisted development exists and *how* the developer’s role is evolving.
 --
+
+=== Learning Objectives
+* Trace the historical shift from automation → augmentation → intelligent collaboration.
+* Recognize how AI changes the developer’s role in modern software teams.
+* Identify the main categories of AI-assisted tools available today.
+* Appreciate both the productivity gains and limitations of AI co-development.
+
+=== Agenda
+1. Brief history of automation in software engineering
+2. The rise of AI-augmented tools
+3. AI-assisted development landscape (2025 snapshot)
+4. The evolving developer role
+5. Discussion and demo
+
+
+include::LG01.11.evolution-of-ai.adoc[]
+[%step]
+
+include::LG01.12.rise-of-ai-assistance.adoc[]
+[%step]
+
+include::LG01.13.developer-role-evolution.adoc[]
+[%step]
+
+include::LG01.14.automation-to-augmentation-shift.adoc[]
+[%step]
+

@@ -2,10 +2,15 @@
 :module: 3
 
 [.columns.is-vcentered]
-== Module {module}
+== Module {module}: Code Review, Refactoring & Testing with AI
 [.column.is_half]
+
+include::LG01.32.ai-code-review.adoc[]
+include::LG01.33.ai-test-generation.adoc[]
+include::LG01.34.integration-in-refactoring.adoc[]
+include::LG01.36.limitations-of-ai.adoc[]
 
 [.notes]
 --
-_topicStart:Module-{module}_
+_topicStart:Module-{module}-day-{day}_
 --

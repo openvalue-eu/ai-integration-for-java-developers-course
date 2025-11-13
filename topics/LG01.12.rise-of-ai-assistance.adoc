@@ -1,0 +1,71 @@
+:imagesdir: ../images
+
+[.columns.is-vcentered]
+== The Rise of AI-Assisted Development
+[.column.is_half]
+
+[.notes]
+--
+_topicStart:Module-{module}-Rise-of-AI-assistance_
+--
+
+[.notes]
+--
+Explain how these tools evolved from autocomplete to deep contextual reasoning.
+--
+
+[.quote]
+____
+“AI should be a copilot, not an autopilot.”
+— *Satya Nadella (Microsoft CEO)*
+____
+
+[.columns.is-vcentered]
+=== Generative models trained on public code
+[.column]
+--
+
+--
+
+[.columns.is-vcentered]
+=== IDE integration
+[.column]
+--
+
+--
+
+[.columns.is-vcentered]
+=== Command-line and documentation assistants
+[.column]
+--
+
+--
+
+[.columns.is-vcentered]
+=== Testing and debugging AI
+[.column]
+--
+
+--
+
+=== Strengths vs Limitations
+[cols="1,1"]
+|===
+|**Capabilities** |**Limitations / Risks**
+|Rapid boilerplate generation |Hallucinated APIs or insecure patterns
+|Contextual test suggestion |Data leakage (sending code snippets)
+|Cross-language translation |Poor architectural reasoning
+|Learning aid / doc summarization |License & IP uncertainty
+|===
+
+=== Categories of AI-Assisted Tools
+* **Coding copilots** – GitHub Copilot, Codeium, Tabby
+* **Documentation & comment generators** – Mintlify, Cody
+* **Testing & QA tools** – CodiumAI, DeepCode, Testim
+* **Refactoring assistants** – ChatGPT plug-ins, IntelliCode
+* **DevOps/SRE automation** – AIOps dashboards, predictive alerts
+
+[.notes]
+--
+Encourage learners to classify tools they already use.
+--

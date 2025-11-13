@@ -1,0 +1,39 @@
+:imagesdir: ../images
+
+[.columns.is-vcentered]
+== Evolution of Developer's Role in AI-Integrated Teams
+[.column.is_half]
+
+[.notes]
+--
+_topicStart:Module-{module}-Developer-evolution_
+--
+
+=== The Developer’s Evolving Role
+* From **author** → **curator** → **AI coach**
+* Core responsibilities:
+** Validate and refine AI output
+** Maintain engineering discipline (tests, style, architecture)
+** Build safety and governance into pipelines
+
+=== New Skill Areas
+
+* Prompt literacy and critical reasoning
+* Model evaluation (accuracy, bias, reliability)
+* MLOps awareness: data, metrics, drift, monitoring
+* Ethical judgment and IP compliance
+
+=== Discussion: Human-in-the-Loop
+[quote, Instructor cue]
+“What tasks would you trust an AI assistant with today, and which would you still reserve for humans?”
+
+**Group prompts**
+* Which phases of your workflow could benefit most?
+* Where might AI hurt maintainability or compliance?
+* How would you document AI involvement in a PR?
+
+
+* Explain how the role of a developer has evolved from code producers to code curators in AI-integrated development environments.
+* Explain the key responsibilities of developers in AI-augmented teams, including code ownership and quality assurance.
+* Discuss the importance of the Human-in-the-Loop (HITL) approach in AI-assisted development workflows.
+* Explain the ethical considerations, practical implications and challenges developers face when working with AI-generated code.

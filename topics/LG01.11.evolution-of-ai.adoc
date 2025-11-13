@@ -1,0 +1,62 @@
+:imagesdir: ../images
+
+== From Automation to Augmentation
+
+[.notes]
+--
+_topicStart:Module-{module}-Evolution-of-AI_
+--
+
+[.columns.is-vcentered]
+=== Automation: The Era Before AI
+[.column]
+--
+Before the advent of sophisticated AI, Java development was largely a manual process. Developers relied heavily on their own knowledge, experience, and traditional tools. This era was characterized by:
+
+* Content:
+** Focused on repetitive automation — CI/CD, static analysis, testing tools.
+** Tools followed deterministic rules.
+** Developer’s job: define logic, enforce consistency.
+
+While IDEs significantly improved productivity, they were primarily syntax-aware. They could identify syntax errors and suggest basic code completions, but lacked the ability to understand the overall context of the project or provide intelligent recommendations based on the developer's intent.
+--
+
+[.columns.is-vcentered]
+=== Augmentation: Emergence of AI
+[.column]
+--
+The initial foray of AI into Java development brought about a new level of automation and assistance.
+
+* Content:
+** AI was mainly data driven, leveraging large codebases.
+** Machine learning models entered build, test, and deployment pipelines.
+** Early AI tools: code completion, bug prediction, pattern detection.
+** AI-assisted development begins, but still reactive.
+
+This era marked a significant step forward, but AI assistance was still largely limited to syntax-level analysis and basic automation. The tools lacked a deep understanding of the project's context, business logic, or the developer's intent.
+--
+
+[.columns.is-vcentered]
+=== Collaboration: AI as a Co-Developer
+[.column]
+--
+The current era represents a paradigm shift in AI assistance, characterized by context awareness and a collaborative relationship between AI and developers. This era is driven by advancements in:
+
+* Content:
+** AI acts as a co-developer who generates, refactors, and tests code.
+** Developers interact through conversation and reasoning, not just commands.
+
+In this era, AI is no longer just a tool for automating tasks; it has become a co-developer, working alongside humans to build software more efficiently and effectively.
+--
+
+[.columns.is-vcentered]
+=== What Has Changed?
+[.column]
+--
+Explain how AI assistance transformed from syntax suggestions to complex problem-solving and creative tasks. This can best be done by highlighting the key shifts in AI capabilities and developer interactions over time.
+
+* Content:
+** **Shift in input** – deterministic rules → learned models → context-aware prompts
+** **Shift in output** – static results → adaptive suggestions → interactive co-generation
+** **Shift in workflow** – isolated tools → integrated copilots → autonomous agents
+--
