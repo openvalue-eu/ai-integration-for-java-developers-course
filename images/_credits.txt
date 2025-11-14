@@ -6,7 +6,8 @@ ai-ml-model-workflow.png            Image recreated from “The Rise of the AI E
 gpt-4-tokenization.png              Image recreated from example of how GPT-4-tokenizes a phrase (Arno Snyman, 2025)
 ai-types.png                        Figure 1.1 as illustrated in "Types of AI", from "AI Integration in Software Development and Operations" (https://link.springer.com/book/10.1007/979-8-8688-1044-2)
 Reinforcement_learning_diagram.png  By Megajuice - Own work, CC0, https://commons.wikimedia.org/w/index.php?curid=57895741
-
+masked-vs-autoregressive.png        Photo by Chip Huyen on Oreilly - AI Engineering (https://www.oreilly.com/catalog/errata.csp?isbn=0790145542717)
 Reinforecement-Learning-in-ML.png   https://media.geeksforgeeks.org/wp-content/uploads/20250903150649221420/Reinforecement-Learning-in-ML.webp
 supervised-machine-learning.png     https://media.geeksforgeeks.org/wp-content/uploads/20241022160725494723/supervised-machine-learning.webp
 Unsupervised-Learning.png           https://media.geeksforgeeks.org/wp-content/uploads/20250903113035199927/Unsupervised-Learning.webp
+when-not-to-use-ai-meme.png         https://mcompton.uk/wp-content/uploads/2025/03/screenshot-2025-03-24-at-16.04.42.png

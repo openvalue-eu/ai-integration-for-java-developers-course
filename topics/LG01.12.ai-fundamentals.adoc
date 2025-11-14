@@ -87,6 +87,8 @@ image::ai-ml-model-workflow.png["Image recreated from “The Rise of the AI Engi
 **Instructor Notes:** Explain at high level how LLMs generate contextually appropriate code. Explain the two kinds of language models (Masked, and Autoregressive).
 --
 
+image::masked-vs-autoregressive.png[Photo by Chip Huyen, height=200]
+
 **Key Points to Cover:**
 [%step]
 --
@@ -119,6 +121,8 @@ image::ai-ml-model-workflow.png["Image recreated from “The Rise of the AI Engi
 --
 **Instructor Notes:** Provide practical guidelines for developers.
 --
+
+image::when-not-to-use-ai-meme.png[Image recreated from "When Not to Use AI" meme, height=100]
 
 **Key Guidelines:**
 [%step]
