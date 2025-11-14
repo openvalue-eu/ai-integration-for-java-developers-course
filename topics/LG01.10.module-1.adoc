@@ -1,5 +1,6 @@
 = Module 1: AI-Assisted Development Fundamentals
 :module: 1
+:duration: 1 hour
 
 [.notes]
 --

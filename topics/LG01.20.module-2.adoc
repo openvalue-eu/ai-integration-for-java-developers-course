@@ -1,5 +1,6 @@
 = Module 2: GitHub Copilot Deep Dive
 :module: 2
+:duration: 2 hours
 
 [.notes]
 --
