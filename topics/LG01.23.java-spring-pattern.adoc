@@ -5,6 +5,7 @@
 [.notes]
 --
 **Instructor Notes:** Show live generation of JPA entity with relationships.
+--
 
 **Key Points to Cover:**
 [%step]
@@ -15,6 +16,7 @@
 - Auditing fields (@CreatedDate, @LastModifiedDate)
 - Lombok annotations integration
 --
+
 **Demo Example:**
 ```
 // Create JPA entity for Product
@@ -22,11 +24,12 @@
 // Include created/updated timestamps
 // Use Lombok @Data and @Entity annotations
 ```
---
+
 === Repository Layer
 [.notes]
 --
 **Instructor Notes:** Show Spring Data JPA custom query generation.
+--
 
 **Key Points to Cover:**
 [%step]
@@ -43,12 +46,12 @@
 // Add method to find products by price range
 // Add method to find top 10 products by category ordered by price
 ```
---
+
 === Service Layer Implementation
 [.notes]
 --
 **Instructor Notes:** Demonstrate business logic with dependency injection and transaction management.
-
+--
 **Key Points to Cover:**
 [%step]
 --
@@ -65,12 +68,12 @@
 // Throw ProductAlreadyExistsException if duplicate name
 // Use @Transactional annotation
 ```
---
+
 === REST Controller Generation
 [.notes]
 --
 **Instructor Notes:** Show full CRUD controller with proper HTTP status codes and error handling.
-
+--
 **Key Points to Cover:**
 [%step]
 --
@@ -88,12 +91,12 @@
 // Return appropriate HTTP status codes
 // Include OpenAPI/Swagger annotations
 ```
---
+
 === Exception Handling
 [.notes]
 --
 **Instructor Notes:** Show global exception handler pattern.
-
+--
 **Key Points to Cover:**
 [%step]
 --
@@ -103,11 +106,12 @@
 - Logging exceptions
 - Returning appropriate status codes
 --
---
+
 === Testing with Copilot
 [.notes]
 --
 **Instructor Notes:** Demonstrate unit and integration test generation. Emphasize reviewing test quality.
+--
 
 **Key Points to Cover:**
 [%step]
@@ -126,12 +130,12 @@
 // Test cases: success, duplicate name, invalid price
 // Use AssertJ for assertions
 ```
---
+
 === Configuration and Properties
 [.notes]
 --
 **Instructor Notes:** Show application.yml generation for Spring Boot.
-
+--
 **Key Points to Cover:**
 [%step]
 --
@@ -140,5 +144,4 @@
 - JPA/Hibernate properties
 - Logging configuration
 - Profile-specific configurations
---
 --

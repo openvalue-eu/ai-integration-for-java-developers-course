@@ -5,6 +5,7 @@
 [.notes]
 --
 **Instructor Notes:** Show timeline of tool evolution. Explain how basic autocomplete worked through text matching, no intelligence involved.
+--
 
 **Key Points to Cover:**
 [%step]
@@ -13,13 +14,14 @@
 - Static analysis tools: rule-based, predefined patterns
 - Limitation: couldn't learn or adapt
 --
---
+
 
 === Augmentation: The rise of AI and Machine Learning (~2020)
 
 [.notes]
 --
 **Instructor Notes:** Explain what changed - massive datasets, computing power, neural network breakthroughs enabled learning from patterns.
+--
 
 **Key Points to Cover:**
 [%step]
@@ -29,13 +31,14 @@
 - GitHub Copilot (2021): first mainstream AI pair programmer
 - Powered by OpenAI Codex
 --
---
+
 
 === Collaboration: Present Day (2024)
 
 [.notes]
 --
 **Instructor Notes:** Show breadth of AI across SDLC. Emphasize paradigm shift from deterministic to probabilistic.
+--
 
 **Key Points to Cover:**
 [%step]
@@ -45,7 +48,7 @@
 - Key limitation: AI suggests likely code, not guaranteed correct
 - Still requires human review and testing
 --
---
+
 
 === Common Misconceptions
 * AI "understands" code like humans do (it doesn't - it's pattern matching)
@@ -57,7 +60,7 @@
 [.notes]
 --
 **Instructor Notes:** Facilitate 3-5 min discussion. Ask about tedious tasks where AI could help.
-
+--
 **Discussion Prompt:**
 "How has your development workflow evolved? What tasks are most tedious where AI assistance would be valuable?"
 
@@ -67,5 +70,4 @@
 - "Will AI replace developers?" - No, it augments capabilities
 - "Can we trust AI suggestions?" - Always review and test
 - Job security fears - AI creates new opportunities
---
 --

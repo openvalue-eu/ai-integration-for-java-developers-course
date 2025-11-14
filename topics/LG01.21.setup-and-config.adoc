@@ -4,6 +4,7 @@
 [.notes]
 --
 **Instructor Notes:** Verify all participants have required access before proceeding. Troubleshoot common issues.
+--
 
 **Key Points to Cover:**
 [%step]
@@ -21,11 +22,12 @@
 - "Works with our corporate proxy?" - Yes, configuration available
 - "Compatible with IntelliJ plugins we use?" - Generally yes, test in your environment
 --
---
+
 === Installing GitHub Copilot Plugin
 [.notes]
 --
 **Instructor Notes:** Walk through installation step-by-step. Show where to find it in Marketplace.
+--
 
 **Installation Steps:**
 [%step]
@@ -36,11 +38,12 @@
 4. Sign in with GitHub account
 5. Authorize Copilot access
 --
---
+
 === Configuration Best Practices
 [.notes]
 --
 **Instructor Notes:** Explain each setting's impact on suggestions and privacy.
+--
 
 **Key Settings to Configure:**
 [%step]
@@ -59,11 +62,12 @@
 - "Can we disable telemetry?" - Yes, in settings
 - "How to prevent sensitive code exposure?" - Use .copilotignore file
 --
---
+
 === Understanding .copilotignore
 [.notes]
 --
 **Instructor Notes:** Show example file. Emphasize importance for security-sensitive code.
+--
 
 **Key Points to Cover:**
 [%step]
@@ -72,5 +76,4 @@
 - Excludes files/folders from Copilot context
 - Use for: config files, credentials, proprietary algorithms
 - Example patterns: `*.properties`, `src/main/resources/application*.yml`
---
 --

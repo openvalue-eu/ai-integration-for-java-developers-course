@@ -4,7 +4,7 @@
 [.notes]
 --
 **Instructor Notes:** 30-40 min hands-on. Circulate to help participants.
-
+--
 **Exercise Goal:** Build a simple Spring Boot REST API with Copilot assistance
 
 **Requirements:**
@@ -18,12 +18,12 @@
 - Exception handling
 - Unit tests for service layer
 --
---
+
 === Step-by-Step Guide
 [.notes]
 --
 **Instructor Notes:** Provide these steps as written guide. Let participants work independently first.
-
+--
 **Steps:**
 [%step]
 --
@@ -36,12 +36,12 @@
 7. Generate unit tests
 8. Test with Postman or curl
 --
---
+
 === Exercise Debrief
 [.notes]
 --
 **Instructor Notes:** 10 min group discussion. Share experiences and learnings.
-
+--
 **Discussion Questions:**
 [%step]
 --
@@ -57,5 +57,4 @@
 - "Copilot generated code with bugs?" - Normal, that's why we review
 - "How much faster was this?" - Typically 30-50% time savings on boilerplate
 - "Ready to use in real projects?" - Yes, with proper review processes
---
 --

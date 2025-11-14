@@ -25,7 +25,10 @@ include::LG01.13.ai-assisted-tools.adoc[]
 
 == Module Summary
 
+[.notes]
+--
 **Instructor Notes:** Reinforce key message - AI augments, not replaces developers (Copilot, not Autopilot). Sets up next module's hands-on work.
+--
 
 **Key Takeaways:**
 [%step]

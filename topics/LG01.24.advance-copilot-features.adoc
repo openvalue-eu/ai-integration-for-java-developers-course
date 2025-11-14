@@ -4,6 +4,7 @@
 [.notes]
 --
 **Instructor Notes:** Demonstrate chat interface for code explanations and refactoring.
+--
 
 **Key Uses:**
 [%step]
@@ -14,11 +15,12 @@
 - "Convert this to use Java 21 features"
 - "Find potential bugs in this code"
 --
---
+
 === Code Review with Copilot
 [.notes]
 --
 **Instructor Notes:** Show how to use Copilot for reviewing pull requests or existing code.
+--
 
 **Key Points to Cover:**
 [%step]
@@ -28,11 +30,12 @@
 - Check for performance improvements
 - Validate against best practices
 --
---
+
 === Documentation Generation
 [.notes]
 --
 **Instructor Notes:** Generate comprehensive Javadoc comments.
+--
 
 **Key Points to Cover:**
 [%step]
@@ -43,11 +46,12 @@
 - Exception documentation (@throws)
 - Usage examples in comments
 --
---
+
 === Refactoring Assistance
 [.notes]
 --
 **Instructor Notes:** Show before/after refactoring examples.
+--
 
 **Refactoring Scenarios:**
 [%step]
@@ -57,5 +61,4 @@
 - Apply design patterns
 - Modernize legacy code
 - Improve naming
---
 --

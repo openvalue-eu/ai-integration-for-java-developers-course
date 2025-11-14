@@ -4,6 +4,7 @@
 [.notes]
 --
 **Instructor Notes:** Demonstrate live. Show how comment quality affects suggestion quality.
+--
 
 **Key Principles:**
 [%step]
@@ -20,12 +21,12 @@
 // Returns: final amount as BigDecimal
 // Handle negative values by throwing IllegalArgumentException
 ```
---
+
 === Context Matters: File and Project Context
 [.notes]
 --
 **Instructor Notes:** Show how Copilot uses surrounding code. Open multiple related files.
-
+--
 **Key Points to Cover:**
 [%step]
 --
@@ -35,11 +36,12 @@
 - Recognizes frameworks (Spring Boot, Hibernate)
 - Adapts to coding style
 --
---
+
 === Prompt Patterns for Java Development
 [.notes]
 --
 **Instructor Notes:** Provide template patterns participants can reuse. Show before/after examples.
+--
 
 **Common Patterns:**
 
@@ -62,11 +64,12 @@
 // Use PaymentGateway interface, handle timeout exceptions
 // Log all transactions, return TransactionResult
 ```
---
+
 === Iterative Refinement
 [.notes]
 --
 **Instructor Notes:** Demonstrate accepting partial suggestion, then refining with additional prompts.
+--
 
 **Key Technique:**
 [%step]
@@ -81,11 +84,12 @@
 // Also add caching using Spring @Cacheable
 // Cache key should be userId + dateRange
 ```
---
+
 === Discussion: Prompt Engineering Challenges
 [.notes]
 --
 **Instructor Notes:** 5 min discussion. Collect examples of prompts that didn't work well.
+--
 
 **Discussion Prompt:**
 "What makes a prompt too vague vs. too specific? How do you find the balance?"
@@ -96,5 +100,4 @@
 - "Copilot suggests wrong framework?" - Be explicit in comments (e.g., "using Spring Data JPA")
 - "Getting generic code?" - Add more context, specify constraints
 - "Suggestions don't match our style?" - Copilot learns from surrounding code
---
 --

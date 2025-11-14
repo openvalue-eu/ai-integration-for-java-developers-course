@@ -17,6 +17,7 @@
 [.notes]
 --
 **Instructor Notes:** Give a quick rundown of AI categories and comparing them. How the types of AI is grouped by capabilities and functionalities.
+--
 
 **Key Points to Cover:**
 [%step]
@@ -31,11 +32,12 @@
 ** Theory of Mind: understand emotions, beliefs (research stage)
 ** Self-Aware (Super AI): possess self-consciousness (theoretical)
 --
---
+
 === Three Types of Machine Learning
 [.notes]
 --
 **Instructor Notes:** Use development-relevant examples for each type.
+--
 
 **Key Points to Cover:**
 [%step]
@@ -44,11 +46,12 @@
 - **Unsupervised:** Find patterns (code smell detection)
 - **Reinforcement:** Trial/error with feedback (build optimization)
 --
---
+
 === Large Language Models (LLMs)
 [.notes]
 --
 **Instructor Notes:** Explain at high level how LLMs generate contextually appropriate code. Show transformer architecture diagram (no math).
+--
 
 **Key Points to Cover:**
 [%step]
@@ -59,12 +62,13 @@
 - Transformer architecture with attention mechanism
 - Why it works: learned statistical patterns
 --
---
+
 === Critical AI Limitations
 
 [.notes]
 --
 **Instructor Notes:** Emphasize this is most important concept for safe usage. Use examples of confident but incorrect AI suggestions.
+--
 
 **Key Points to Cover:**
 [%step]
@@ -75,12 +79,13 @@
 - No awareness of your production constraints
 - Always review and test AI-generated code
 --
---
+
 
 === Discussion: Where Can AI Help?
 [.notes]
 --
 **Instructor Notes:** Connect ML concepts to daily work. Expected insights: AI good at boilerplate, struggles with novel business logic.
+--
 
 **Discussion Prompt:**
 "Where do you spend time: boilerplate, business logic, debugging, refactoring? Which would AI help most with based on how it works?"
@@ -91,5 +96,4 @@
 - "Why can't AI handle complex business logic?" - Limited by training data patterns
 - "Is AI just guessing?" - Yes, probabilistic predictions based on learned patterns
 - "When should we not use AI?" - Novel problems, security-critical code without review
---
 --

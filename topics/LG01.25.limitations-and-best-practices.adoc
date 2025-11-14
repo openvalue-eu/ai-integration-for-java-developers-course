@@ -4,6 +4,7 @@
 [.notes]
 --
 **Instructor Notes:** Show real examples of poor suggestions. Teach critical evaluation.
+--
 
 **Common Issues:**
 [%step]
@@ -14,11 +15,12 @@
 - Subtle security vulnerabilities
 - Deprecated API usage
 --
---
+
 === Security Considerations
 [.notes]
 --
 **Instructor Notes:** Reference security research paper on AI-generated code vulnerabilities.
+--
 
 **Key Risks:**
 [%step]
@@ -46,11 +48,12 @@
 - "Can we trust Copilot for security-sensitive features?" - No, always require expert review
 - "Should we use Copilot for payment processing?" - Yes, but with rigorous review and testing
 --
---
+
 === Code Quality Checks
 [.notes]
 --
 **Instructor Notes:** Emphasize that AI is assistant, not authority.
+--
 
 **Required Checks:**
 [%step]
@@ -61,11 +64,12 @@
 - Integration testing
 - Security scanning
 --
---
+
 === Performance Considerations
 [.notes]
 --
 **Instructor Notes:** Show examples of functionally correct but inefficient code.
+--
 
 **Watch For:**
 [%step]
@@ -76,11 +80,12 @@
 - Unnecessary object creation
 - Blocking operations in async contexts
 --
---
+
 === Legal and Licensing Concerns
 [.notes]
 --
 **Instructor Notes:** Brief overview of intellectual property considerations.
+--
 
 **Key Points:**
 [%step]
@@ -99,11 +104,12 @@
 - "Who owns AI-generated code?" - Your organization, per GitHub's terms
 - "Should we disclose AI usage?" - Check your org's policies
 --
---
+
 === Discussion: Governance and Guidelines
 [.notes]
 --
 **Instructor Notes:** 5 min discussion. Help participants think through team policies.
+--
 
 **Discussion Prompt:**
 "What guidelines should your team establish for using Copilot? Who reviews AI-generated code? What's prohibited?"
@@ -114,5 +120,4 @@
 - "Do we need approval before using Copilot?" - Depends on organization
 - "Should we track which code came from AI?" - Consider for audit purposes
 - "Can junior developers use Copilot unsupervised?" - Requires senior review
---
 --

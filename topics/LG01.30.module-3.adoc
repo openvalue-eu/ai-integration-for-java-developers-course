@@ -24,6 +24,7 @@ Duration: 1.5 hours
 --
 **Instructor Notes:** Recap practical skills learned. Set context for next module.
 --
+
 **Key Takeaways:**
 [%step]
 --
