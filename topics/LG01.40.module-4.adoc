@@ -1,65 +1,64 @@
-= Module 2: GitHub Copilot Deep Dive: Setup, Configuration, and Effective Prompting
-:module: 2
-:duration: 2 hours
+= Module 3: Practical Exercises - AI-Assisted Code Review, Refactoring, and Testing
+:module: 3
+:duration: 1.5 hours
 
 [.notes]
 --
 _topicStart:Module-{module}-Day-{day}_
 --
 
-Duration: 2 hours
+== Module 3: Practical Exercises
 
-== Learning Objectives
+Duration: 1.5 hours
 
-* Configure GitHub Copilot in IntelliJ IDEA
-* Write effective prompts for Java/Kotlin code generation
-* Use Copilot for common Java development patterns
-* Apply Copilot to Spring Boot development
-* Recognize and handle Copilot's limitations
-* Implement security best practices with AI assistance
+=== Learning Objectives
 
-include::LG01.41.setup-and-config.adoc[]
-
-include::LG01.42.effective-prompting.adoc[]
-
-include::LG01.43.java-spring-pattern.adoc[]
-
-include::LG01.44.advance-copilot-features.adoc[]
-
-include::LG01.45.limitations-and-best-practices.adoc[]
-
-include::LB01.46.spring-boot-copilot-assistant.adoc[]
+* Use AI tools for code review and quality analysis
+* Apply AI-assisted refactoring techniques
+* Generate and optimize test cases with AI
+* Evaluate AI suggestions critically
+* Integrate AI tools into existing workflows
 
 == Module Summary
 [.notes]
 --
-**Instructor Notes:** Recap key learnings. Set expectations for next module.
+**Instructor Notes:** Recap practical skills learned. Set context for next module.
 --
+
 **Key Takeaways:**
 [%step]
 --
-- Copilot accelerates boilerplate and common patterns
-- Effective prompting is learnable skill
-- Always review, test, and secure generated code
-- Establishes team guidelines and governance
-- Powerful for Spring Boot development patterns
-- Not a replacement for developer expertise
+- AI accelerates code review, refactoring, testing
+- Always critically evaluate AI suggestions
+- Test-driven discipline still essential
+- AI is productivity tool, not replacement for expertise
+- Integration requires team standards and governance
 --
 
-**Best Practices Recap:**
+**Skills Practiced:**
 [%step]
 --
-- Comment-driven development
-- Iterative refinement
-- Security-first mindset
-- Comprehensive testing
-- Code review processes
+- ✓ AI-assisted code review
+- ✓ Refactoring with AI guidance
+- ✓ Test generation and TDD with AI
+- ✓ Critical evaluation of AI output
+- ✓ Workflow integration
 --
 
-**Next Module:** Practical exercises in code review, refactoring, and testing with AI assistance
+**Best Practices Reinforced:**
+[%step]
+--
+- Incremental refactoring
+- Test after each change
+- Comprehensive test coverage
+- Code review discipline
+- Documentation standards
+--
+
+**Next Module:** AI fundamentals for Java developers and Java AI libraries overview
 
 === Q&A
 [.notes]
 --
-**Instructor Notes:** 10 min for questions. Address concerns about real-world usage.
+**Instructor Notes:** 5 min for questions. Address concerns about real-world adoption and team dynamics.
 --
