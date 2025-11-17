@@ -1,4 +1,4 @@
-= Module 2: GitHub Copilot Deep Dive
+= Module 2: GitHub Copilot Deep Dive: Setup, Configuration, and Effective Prompting
 :module: 2
 :duration: 2 hours
 
@@ -7,11 +7,9 @@
 _topicStart:Module-{module}-Day-{day}_
 --
 
-== Module 2: GitHub Copilot Deep Dive
-
 Duration: 2 hours
 
-=== Learning Objectives
+== Learning Objectives
 
 * Configure GitHub Copilot in IntelliJ IDEA
 * Write effective prompts for Java/Kotlin code generation
@@ -19,8 +17,6 @@ Duration: 2 hours
 * Apply Copilot to Spring Boot development
 * Recognize and handle Copilot's limitations
 * Implement security best practices with AI assistance
-
-=== Learning Objectives
 
 include::LG01.21.setup-and-config.adoc[]
 
