@@ -1,13 +1,13 @@
 == Topic 3: Overview of AI-Assisted Development Tools
 :imagesdir: ../images
 
+image::ai-tool-copilot.jpg[]
+
 === Tool Landscape
 [.notes]
 --
 **Instructor Notes:** Give a brief explanation on the different categories of AI-assisted development tools.
 --
-
-image::ai-tool-copilot.jpg[]
 
 **Key Categories:**
 [%step]

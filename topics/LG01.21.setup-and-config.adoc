@@ -1,4 +1,7 @@
 == Topic 1: Setup and Configuration
+:imagesdir: ../images
+
+image::setup-and-config.png[]
 
 === Prerequisites Check
 [.notes]

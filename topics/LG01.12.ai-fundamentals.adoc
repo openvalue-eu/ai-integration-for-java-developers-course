@@ -1,6 +1,8 @@
 == Topic 2: AI Fundamentals for Java Developers
 :imagesdir: ../images
 
+image::ai-fundamentals.png[]
+
 === Tokenization and Vocabulary
 [.notes]
 --
@@ -144,6 +146,8 @@ image::when-not-to-use-ai-meme.png[Image recreated from "When Not to Use AI" mem
 --
 **Instructor Notes:** Expected insights: AI good at boilerplate, struggles with novel business logic.
 --
+
+image::discussion.png[]
 
 **Discussion Prompt:**
 "Where do you spend time: boilerplate, business logic, debugging, refactoring? Which would AI help most with based on how it works?"
