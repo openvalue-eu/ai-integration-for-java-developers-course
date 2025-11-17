@@ -1,4 +1,7 @@
 == Topic 2: Effective Prompting Techniques
+:imagesdir: ../images
+
+image::prompt-writing.png[]
 
 === Comment-Driven Development
 [.notes]
@@ -90,6 +93,8 @@
 --
 **Instructor Notes:** 5 min discussion. Collect examples of prompts that didn't work well.
 --
+
+image::discussion.png[]
 
 **Discussion Prompt:**
 "What makes a prompt too vague vs. too specific? How do you find the balance?"

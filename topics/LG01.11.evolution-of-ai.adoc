@@ -1,4 +1,7 @@
 == Topic 1: Evolution of AI in Software Development
+:imagesdir: ../images
+
+image::ai-evolution.png[]
 
 === Automation: Era before AI (1990s-2010s)
 
@@ -6,6 +9,8 @@
 --
 **Instructor Notes:** Show timeline of tool evolution. Explain how basic autocomplete worked through text matching, no intelligence involved.
 --
+
+image::back-in-my-day.png[]
 
 **Key Points to Cover:**
 [%step]
@@ -23,6 +28,8 @@
 **Instructor Notes:** Explain what changed - massive datasets, computing power, neural network breakthroughs enabled learning from patterns.
 --
 
+image::application-of-machine-learning.png[]
+
 **Key Points to Cover:**
 [%step]
 --
@@ -32,13 +39,14 @@
 - Powered by OpenAI Codex
 --
 
-
 === Collaboration: Present Day (2024)
 
 [.notes]
 --
 **Instructor Notes:** Show breadth of AI across SDLC. Emphasize paradigm shift from deterministic to probabilistic.
 --
+
+image::ai-tool-copilot.jpg[]
 
 **Key Points to Cover:**
 [%step]
@@ -61,6 +69,9 @@
 --
 **Instructor Notes:** Facilitate 3-5 min discussion. Ask about tedious tasks where AI could help.
 --
+
+image::discussion.png[]
+
 **Discussion Prompt:**
 "How has your development workflow evolved? What tasks are most tedious where AI assistance would be valuable?"
 
