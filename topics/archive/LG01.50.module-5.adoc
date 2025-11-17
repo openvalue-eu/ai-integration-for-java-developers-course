@@ -1,0 +1,11 @@
+:imagesdir: ../images
+:module: 5
+
+[.columns.is-vcentered]
+== Module {module}: Building Your First AI-Enhances Java Application
+[.column.is_half]
+
+[.notes]
+--
+_topicStart:Module-{module}-day-{day}_
+--

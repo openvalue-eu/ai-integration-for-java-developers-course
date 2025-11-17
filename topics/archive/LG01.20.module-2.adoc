@@ -1,0 +1,11 @@
+:imagesdir: ../images
+:module: 2
+
+[.columns.is-vcentered]
+== Module {module}: GitHub Copilot Deep Dive
+[.column.is_half]
+
+[.notes]
+--
+_topicStart:Module-{module}-day-{day}_
+--

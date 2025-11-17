@@ -1,0 +1,13 @@
+:imagesdir: ../images
+:module: 4
+
+[.columns.is-vcentered]
+== Module {module}: AI Fundamentals for Java Developers
+[.column.is_half]
+
+[.notes]
+--
+_topicStart:Module-{module}-day-{day}_
+--
+
+include::LG01.41.types-of-ai.adoc[]

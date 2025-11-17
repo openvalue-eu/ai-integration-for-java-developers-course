@@ -1,0 +1,38 @@
+:imagesdir: ../images
+
+== Types of AI
+
+[.notes]
+--
+_topicStart:Module-{module}-Evolution-of-AI_
+--
+
+[.columns.is-vcentered]
+== Categories of AI
+[.column]
+--
+--
+
+[.columns.is-vcentered]
+== Reactive Machines (Narrow AI)
+[.column]
+--
+--
+
+[.columns.is-vcentered]
+== Limited Memory AI (General AI)
+[.column]
+--
+--
+
+[.columns.is-vcentered]
+== Theory of Mind AI
+[.column]
+--
+--
+
+[.columns.is-vcentered]
+== Self-Aware AI (Super AI)
+[.column]
+--
+--

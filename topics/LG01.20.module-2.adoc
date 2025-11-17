@@ -1,11 +1,69 @@
-:imagesdir: ../images
+= Module 2: GitHub Copilot Deep Dive
 :module: 2
-
-[.columns.is-vcentered]
-== Module {module}
-[.column.is_half]
+:duration: 2 hours
 
 [.notes]
 --
-_topicStart:Module-{module}_
+_topicStart:Module-{module}-Day-{day}_
+--
+
+== Module 2: GitHub Copilot Deep Dive
+
+Duration: 2 hours
+
+=== Learning Objectives
+
+* Configure GitHub Copilot in IntelliJ IDEA
+* Write effective prompts for Java/Kotlin code generation
+* Use Copilot for common Java development patterns
+* Apply Copilot to Spring Boot development
+* Recognize and handle Copilot's limitations
+* Implement security best practices with AI assistance
+
+=== Learning Objectives
+
+include::LG01.21.setup-and-config.adoc[]
+
+include::LG01.22.effective-prompting.adoc[]
+
+include::LG01.23.java-spring-pattern.adoc[]
+
+include::LG01.24.advance-copilot-features.adoc[]
+
+include::LG01.25.limitations-and-best-practices.adoc[]
+
+include::LB01.26.spring-boot-copilot-assistant.adoc[]
+
+== Module Summary
+[.notes]
+--
+**Instructor Notes:** Recap key learnings. Set expectations for next module.
+--
+**Key Takeaways:**
+[%step]
+--
+- Copilot accelerates boilerplate and common patterns
+- Effective prompting is learnable skill
+- Always review, test, and secure generated code
+- Establishes team guidelines and governance
+- Powerful for Spring Boot development patterns
+- Not a replacement for developer expertise
+--
+
+**Best Practices Recap:**
+[%step]
+--
+- Comment-driven development
+- Iterative refinement
+- Security-first mindset
+- Comprehensive testing
+- Code review processes
+--
+
+**Next Module:** Practical exercises in code review, refactoring, and testing with AI assistance
+
+=== Q&A
+[.notes]
+--
+**Instructor Notes:** 10 min for questions. Address concerns about real-world usage.
 --

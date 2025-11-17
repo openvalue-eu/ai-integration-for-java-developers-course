@@ -1,0 +1,10 @@
+:imagesdir: ../images
+
+[.columns.is-vcentered]
+== Integrating AI in Refactoring Patterns and Practices
+[.column.is_half]
+
+[.notes]
+--
+_topicStart:Module-{module}-ai-for-refactoring_
+--

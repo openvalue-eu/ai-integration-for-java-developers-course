@@ -1,0 +1,10 @@
+:imagesdir: ../images
+
+[.columns.is-vcentered]
+== The shift from automation to augmentation
+[.column.is_half]
+
+[.notes]
+--
+_topicStart:Module-{module}-automation-to-augmentation-shift_
+--

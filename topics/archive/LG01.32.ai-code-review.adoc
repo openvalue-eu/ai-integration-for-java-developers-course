@@ -1,11 +1,10 @@
 :imagesdir: ../images
-:module: 4
 
 [.columns.is-vcentered]
-== Module {module}
+== AI-Assistance in Code Review
 [.column.is_half]
 
 [.notes]
 --
-_topicStart:Module-{module}_
+_topicStart:Module-{module}-ai-code-review_
 --

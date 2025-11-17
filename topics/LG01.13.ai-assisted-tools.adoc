@@ -1,0 +1,153 @@
+== Topic 3: Overview of AI-Assisted Development Tools
+:imagesdir: ../images
+
+=== Tool Landscape
+[.notes]
+--
+**Instructor Notes:** Give a brief explanation on the different categories of AI-assisted development tools.
+--
+
+image::ai-tool-copilot.jpg[]
+
+**Key Categories:**
+[%step]
+--
+- Code generation & completion
+- Code review & quality
+- Testing & test generation
+- Documentation & knowledge
+--
+
+=== Code Generation & Completion
+[.notes]
+--
+**Instructor Notes:** Give an explanation on the tools which are typically used for code generation and completion. Focus on what makes each tool unique from the other AI tools.
+--
+
+
+image::code-gen-logos.svg.png[]
+
+**Key Tools:**
+[%step]
+--
+- GitHub Copilot (most popular, Codex-based)
+- Open AI Codex
+- JetBrains Junie (IDE integration)
+- Windsurf (specialized domains)
+- Tabnine (privacy-focused, on-premise)
+- Amazon Q Developer (AWS integration)
+- Cursor (AI-first IDE)
+--
+
+=== Code Review & Quality
+[.notes]
+--
+**Instructor Notes:** Give an explanation on the tools which are typically used for code reviewing and code quality. Just like the previous section, focus on what makes each tool unique from the other AI tools.
+--
+
+image::code-review-logo.svg.png[]
+
+**Key Tools:**
+[%step]
+--
+- SonarSweep (pipeline integration)
+- Codacy (code style + quality)
+- JetBrains Junie
+- GitHub Copilot (code review suggestions)
+- DeepCode (security vulnerabilities)
+- Amazon CodeGuru (performance + AWS best practices)
+- CodeScene (behavioral code analysis)
+--
+
+=== Testing & Test Generation
+[.notes]
+--
+**Instructor Notes:** Give an explanation on the tools which are typically used for code testing and test scenario generation. Just like the previous sections, focus on what makes each tool unique from the other AI tools.
+--
+
+image::code-test-logo.svg.png[]
+
+**Key Tools:**
+[%step]
+--
+- JetBrains Junie
+- Diffblue Cover (automated unit tests in CI/CD)
+- Testim (reducing flaky tests)
+- ACCELQ (codeless test automation)
+- Applitools (visual regression testing)
+- Mabl (Agentic workflows for testing)
+--
+
+=== Documentation and Knowledge
+[.notes]
+--
+**Instructor Notes:** Give an explanation on the tools which are typically used for code documentation and retrieval of the context of the code base. Just like the previous sections, focus on what makes each tool unique from the other AI tools.
+--
+
+image::code-doc-logo.svg.png[]
+
+**Key Tools:**
+[%step]
+--
+- JetBrains Junie
+- Anthropic Claude AI
+- Apidog
+- GitHub Copilot
+- Amazon Q Developer
+- Mintlify
+- Qodo
+--
+
+=== Demo: GitHub Copilot in Action
+[.notes]
+--
+**Instructor Notes:** 5-10 min live demo in IntelliJ with a Spring Boot project, which utilizes GitHub Copilot to satisfy the demo steps provided below. It would be wise to already create some boilerplate code to save time during the demo, but make sure to show the AI suggestions in real-time. It is also fine to start the demo from scratch if time permits.
+--
+
+image::demo-2.png[]
+
+**Demo Steps:**
+[%step]
+--
+1. Comment-driven development: write service method comment, show suggestion
+2. Generate unit test for the method
+3. Generate Javadoc comments
+4. Refactor for readability
+--
+
+=== Tool Selection Criteria
+[.notes]
+--
+**Instructor Notes:** Help participants think through what matters for their organization.
+--
+
+**Key Factors:**
+[%step]
+--
+- Security/compliance (code privacy)
+- Integration with existing toolchain
+- Learning curve and team readiness
+- Cost vs. value (ROI)
+- Deployment model (cloud vs. on-premise)
+--
+
+=== Discussion: Selection Strategy
+[.notes]
+--
+**Instructor Notes:** 5-10 min discussion. Address common concerns proactively to remove adoption barriers.
+--
+
+image::discussion.png[]
+
+**Discussion Prompt:**
+"What factors are most important for your organization? What concerns might prevent AI tool adoption?"
+
+**Common Concerns to Address:**
+[%step]
+--
+- **Security:** "Will our code leave the organization?" - Depends on tool, some offer on-premise (Tabnine)
+- **Cost:** "Too expensive for large teams?" - Pilot first, measure ROI
+- **Integration:** "Will it work with our stack?" - Check compatibility before commitment
+- **Resistance:** "AI will replace developers?" - Augmentation not replacement, creates new opportunities
+- **Quality:** "Can we trust AI suggestions?" - Always review, use as assistant not authority
+--

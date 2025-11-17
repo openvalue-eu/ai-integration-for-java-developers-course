@@ -1,0 +1,64 @@
+== Topic 4: Advanced Copilot Features
+
+=== Copilot Chat
+[.notes]
+--
+**Instructor Notes:** Demonstrate chat interface for code explanations and refactoring.
+--
+
+**Key Uses:**
+[%step]
+--
+- "Explain this method"
+- "Refactor this for better readability"
+- "Add error handling to this code"
+- "Convert this to use Java 21 features"
+- "Find potential bugs in this code"
+--
+
+=== Code Review with Copilot
+[.notes]
+--
+**Instructor Notes:** Show how to use Copilot for reviewing pull requests or existing code.
+--
+
+**Key Points to Cover:**
+[%step]
+--
+- Ask Copilot to review specific methods
+- Request security vulnerability analysis
+- Check for performance improvements
+- Validate against best practices
+--
+
+=== Documentation Generation
+[.notes]
+--
+**Instructor Notes:** Generate comprehensive Javadoc comments.
+--
+
+**Key Points to Cover:**
+[%step]
+--
+- Method-level documentation
+- Parameter descriptions
+- Return value documentation
+- Exception documentation (@throws)
+- Usage examples in comments
+--
+
+=== Refactoring Assistance
+[.notes]
+--
+**Instructor Notes:** Show before/after refactoring examples.
+--
+
+**Refactoring Scenarios:**
+[%step]
+--
+- Extract method
+- Simplify complex conditionals
+- Apply design patterns
+- Modernize legacy code
+- Improve naming
+--

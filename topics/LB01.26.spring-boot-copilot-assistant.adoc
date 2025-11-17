@@ -1,0 +1,60 @@
+== Topic 6: Hands-On Exercise
+
+=== Exercise Overview
+[.notes]
+--
+**Instructor Notes:** 30-40 min hands-on. Circulate to help participants.
+--
+**Exercise Goal:** Build a simple Spring Boot REST API with Copilot assistance
+
+**Requirements:**
+[%step]
+--
+- Create Employee management system
+- Entity: Employee (id, name, email, department, salary)
+- Repository with custom queries
+- Service layer with business validation
+- REST controller with full CRUD
+- Exception handling
+- Unit tests for service layer
+--
+
+=== Step-by-Step Guide
+[.notes]
+--
+**Instructor Notes:** Provide these steps as written guide. Let participants work independently first.
+--
+**Steps:**
+[%step]
+--
+1. Create Spring Boot project structure
+2. Define Employee entity with JPA annotations
+3. Create EmployeeRepository interface
+4. Implement EmployeeService with validation
+5. Build EmployeeController with REST endpoints
+6. Add global exception handler
+7. Generate unit tests
+8. Test with Postman or curl
+--
+
+=== Exercise Debrief
+[.notes]
+--
+**Instructor Notes:** 10 min group discussion. Share experiences and learnings.
+--
+**Discussion Questions:**
+[%step]
+--
+- Where did Copilot help most?
+- Where did suggestions need correction?
+- What prompts worked well?
+- What would you do differently?
+--
+
+**Common Concerns to Address:**
+[%step]
+--
+- "Copilot generated code with bugs?" - Normal, that's why we review
+- "How much faster was this?" - Typically 30-50% time savings on boilerplate
+- "Ready to use in real projects?" - Yes, with proper review processes
+--
