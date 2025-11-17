@@ -1,51 +1,65 @@
-= Module 4: AI Fundamentals for Java Developers and Java AI Libraries
+= Module 2: GitHub Copilot Deep Dive: Setup, Configuration, and Effective Prompting
+:module: 2
+:duration: 2 hours
 
-Duration: 1.5 hours
+[.notes]
+--
+_topicStart:Module-{module}-Day-{day}_
+--
+
+Duration: 2 hours
 
 == Learning Objectives
 
-* Understand AI/ML concepts relevant to Java development
-* Differentiate between AI library capabilities and use cases
-* Set up and configure Java AI libraries
-* Implement basic ML models in Java
-* Choose appropriate libraries for specific problems
-* Understand model training vs. inference in Java
+* Configure GitHub Copilot in IntelliJ IDEA
+* Write effective prompts for Java/Kotlin code generation
+* Use Copilot for common Java development patterns
+* Apply Copilot to Spring Boot development
+* Recognize and handle Copilot's limitations
+* Implement security best practices with AI assistance
 
-include::LG01.41.ai-fundamentals.adoc[]
+include::LG01.41.setup-and-config.adoc[]
 
+include::LG01.42.effective-prompting.adoc[]
+
+include::LG01.43.java-spring-pattern.adoc[]
+
+include::LG01.44.advance-copilot-features.adoc[]
+
+include::LG01.45.limitations-and-best-practices.adoc[]
+
+include::LB01.46.spring-boot-copilot-assistant.adoc[]
 
 == Module Summary
-
-**Instructor Notes:** Recap key concepts. Emphasize practical application.
-
+[.notes]
+--
+**Instructor Notes:** Recap key learnings. Set expectations for next module.
+--
 **Key Takeaways:**
-- Java has mature ML libraries (DJL, Tribuo, DL4J)
-- Pre-trained models are easiest starting point
-- Inference in Java is production-ready
-- Choose library based on use case
-- ML integration follows standard Java patterns
+[%step]
+--
+- Copilot accelerates boilerplate and common patterns
+- Effective prompting is learnable skill
+- Always review, test, and secure generated code
+- Establishes team guidelines and governance
+- Powerful for Spring Boot development patterns
+- Not a replacement for developer expertise
+--
 
-**Skills Developed:**
-- ✓ Understanding ML fundamentals
-- ✓ Setting up Java AI libraries
-- ✓ Using pre-trained models for inference
-- ✓ Building AI-enhanced REST APIs
-- ✓ Choosing appropriate libraries
+**Best Practices Recap:**
+[%step]
+--
+- Comment-driven development
+- Iterative refinement
+- Security-first mindset
+- Comprehensive testing
+- Code review processes
+--
 
-**Best Practices:**
-- Start with pre-trained models
-- Profile performance in production
-- Handle ML errors gracefully
-- Monitor predictions
-- Keep models updated
-
-**Common Concerns Addressed:**
-- "Too complex?" - Pre-trained models abstract complexity
-- "Performance?" - Inference is fast enough for most apps
-- "Which library?" - Depends on use case (DJL for inference, Tribuo for traditional ML)
-
-**Next Module:** Building your first AI-enhanced Java application (hands-on workshop)
+**Next Module:** Practical exercises in code review, refactoring, and testing with AI assistance
 
 === Q&A
-
-**Instructor Notes:** 5 min for questions. Prepare for questions about specific use cases and production concerns.
+[.notes]
+--
+**Instructor Notes:** 10 min for questions. Address concerns about real-world usage.
+--
