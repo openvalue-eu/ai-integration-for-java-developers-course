@@ -1,5 +1,11 @@
 == Topic 1: Evolution of AI in Software Development
 :imagesdir: ../images
+:topic: 1
+
+[.notes]
+--
+_topicStart:Module-{module}-Topic-{topic}-Day-{day}_
+--
 
 image::ai-evolution.png[]
 
@@ -28,7 +34,7 @@ image::back-in-my-day.png[]
 **Instructor Notes:** Explain what changed - massive datasets, computing power, neural network breakthroughs enabled learning from patterns.
 --
 
-image::application-of-machine-learning.png[]
+image::rise-of-ai.jpg[]
 
 **Key Points to Cover:**
 [%step]

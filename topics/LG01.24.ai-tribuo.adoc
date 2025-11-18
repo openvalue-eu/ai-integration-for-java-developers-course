@@ -1,0 +1,64 @@
+== Topic 4: Tribuo
+:imagesdir: ../images
+:topic: 4
+
+[.notes]
+--
+_topicStart:Module-{module}-Topic-{topic}-Day-{day}_
+--
+
+=== Tribuo Overview and Setup
+
+[.notes]
+--
+**Instructor Notes:** Position Tribuo for traditional ML on tabular data.
+--
+
+**Maven Dependencies:**
+```xml
+<dependency>
+    <groupId>org.tribuo</groupId>
+    <artifactId>tribuo-core</artifactId>
+    <version>4.3.2</version>
+</dependency>
+
+<!-- Algorithm specific -->
+<dependency>
+    <groupId>org.tribuo</groupId>
+    <artifactId>tribuo-classification-sgd</artifactId>
+    <version>4.3.2</version>
+</dependency>
+```
+
+**Key Concepts:**
+[%step]
+--
+- `DataSource` for loading data
+- `Trainer` for training models
+- `Model` for predictions
+- `Evaluator` for metrics
+--
+
+=== Tribuo's Type Safety
+
+[.notes]
+--
+**Instructor Notes:** Emphasize this as key differentiator. Show compile-time safety benefits.
+--
+
+**Type Safety Features:**
+[%step]
+--
+- Generic types: `Model<Label>`, `Prediction<Label>`
+- Compile-time checking of feature types
+- Type-safe evaluation metrics
+- Prevents common ML errors at compile time
+--
+
+**Example Benefit:**
+```java
+// This won't compile - type mismatch
+Model<Label> classifier = ...;
+Model<Regressor> regressor = ...;
+regressor = classifier; // Compile error!
+```

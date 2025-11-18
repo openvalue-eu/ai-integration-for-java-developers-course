@@ -1,0 +1,186 @@
+== Topic 2: Java AI Libraries
+:imagesdir: ../images
+:topic: 2
+
+[.notes]
+--
+_topicStart:Module-{module}-Topic-{topic}-Day-{day}_
+--
+
+image::library.jpg[]
+
+=== Overview of Major Libraries
+
+[.notes]
+--
+**Instructor Notes:** Position each library in the ecosystem. Explain when to choose each.
+--
+
+**Three Major Java AI Libraries:**
+[%step]
+--
+* **Deep Java Library (DJL)** - Amazon, framework-agnostic
+* **Tribuo** - Oracle, traditional ML focus
+* **Deeplearning4j (DL4J)** - Eclipse Foundation, deep learning
+--
+
+**Other Notable Mentions:**
+[%step]
+--
+- Weka (traditional ML, research-oriented)
+- MOA (streaming data)
+- Smile (statistical ML)
+--
+
+=== Deep Java Library (DJL)
+
+[.notes]
+--
+**Instructor Notes:** Emphasize DJL's flexibility and production readiness. Amazon's backing is important.
+--
+
+image::djl.jpg[]
+
+**Key Features:**
+[%step]
+--
+- Engine/Framework agnostic (PyTorch, TensorFlow, MXNet backends)
+- Supports both model loading from the model zoo and custom-trained models
+- Inference optimized for production
+- Strong AWS integration
+- Active development and support
+--
+
+**Best For:**
+[%step]
+--
+- Loading pre-trained models
+- Production inference workloads
+- Teams familiar with AWS
+- Framework flexibility needed
+--
+
+**Architecture:**
+```
+Java Application
+    ↓
+DJL API (framework agnostic)
+    ↓
+Engine (PyTorch, TensorFlow, MXNet)
+    ↓
+Native Libraries
+```
+
+=== Tribuo
+
+[.notes]
+--
+**Instructor Notes:** Position as enterprise-ready for traditional ML. Oracle backing matters for enterprise adoption.
+--
+
+image::tribuo_animation.gif[]
+
+**Key Features:**
+[%step]
+--
+- Traditional ML algorithms (classification, regression, clustering)
+- Type-safe, Java-first design
+- Provenance tracking (model lineage)
+- ONNX export support
+- Production hardened by Oracle
+--
+
+**Best For:**
+[%step]
+--
+- Traditional ML (not deep learning)
+- Enterprises needing Oracle support
+- Tabular data problems
+- Model governance requirements
+--
+
+**Supported Algorithms:**
+[%step]
+--
+- Classification: SVM, Decision Trees, Random Forest
+- Regression: Linear, Ridge, Lasso
+- Clustering: K-Means, DBSCAN
+- Anomaly Detection
+--
+
+=== Deeplearning4j (DL4J)
+
+[.notes]
+--
+**Instructor Notes:** Explain DL4J's focus on deep learning and distributed training.
+--
+
+image::dl4j.png[]
+
+**Key Features:**
+[%step]
+--
+- Native Java deep learning
+- Distributed training (Spark integration)
+- Built-in neural network architectures
+- ETL pipeline (DataVec)
+- Commercial support available
+--
+
+**Best For:**
+[%step]
+--
+- Building custom neural networks
+- Distributed training needs
+- Pure Java stack preference
+- Computer vision, NLP tasks
+--
+
+**Components:**
+[%step]
+--
+- **ND4J:** NumPy for Java (n-dimensional arrays)
+- **DataVec:** ETL for ML data
+- **DL4J:** Neural network library
+- **RL4J:** Reinforcement learning
+--
+
+=== Library Comparison Matrix
+
+[.notes]
+--
+**Instructor Notes:** Show side-by-side comparison. Help participants choose based on requirements.
+--
+
+**Comparison Criteria:**
+|===
+| **Feature** | **DJL** | **Tribuo** | **DL4J**
+| ML Type | All | Traditional | Deep Learning
+| Pre-trained Models | Extensive | Limited | Moderate
+| Training | Limited | Yes | Yes
+| Inference | Excellent | Good | Good
+| Production Ready | Yes | Yes | Yes
+| Learning Curve | Low | Medium | High
+| Documentation | Excellent | Good | Good
+| Community | Growing | Smaller | Established
+|===
+
+=== Discussion: Library Selection
+
+[.notes]
+--
+**Instructor Notes:** 5 min discussion. Help participants think through their specific needs.
+--
+
+image::discussion-4.jpg[]
+
+**Discussion Prompt:**
+"Based on your use cases, which library seems most appropriate? What factors matter most for your team?"
+
+**Common Concerns to Address:**
+[%step]
+--
+- "Which is easiest to learn?" - DJL for inference, Tribuo for traditional ML
+- "Which is most production-ready?" - All three, but DJL has AWS advantage
+- "Can we switch libraries later?" - Yes, but costly; choose carefully
+--

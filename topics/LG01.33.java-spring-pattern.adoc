@@ -1,4 +1,10 @@
 == Topic 3: Java and Spring Boot Development Patterns
+:topic: 3
+
+[.notes]
+--
+_topicStart:Module-{module}-Topic-{topic}-Day-{day}_
+--
 
 === Generating Entity Classes
 

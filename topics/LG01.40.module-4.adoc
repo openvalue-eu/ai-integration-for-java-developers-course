@@ -1,10 +1,10 @@
-= Module 3: Practical Exercises - AI-Assisted Code Review, Refactoring, and Testing
-:module: 3
+= Module 4: Practical Exercises - AI-Assisted Code Review, Refactoring, and Testing
+:module: 4
 :duration: 1.5 hours
 
 [.notes]
 --
-_topicStart:Module-{module}-Day-{day}_
+_moduleStart:Module-{module}-Day-{day}_
 --
 
 == Module 3: Practical Exercises

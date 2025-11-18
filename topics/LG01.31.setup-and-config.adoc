@@ -1,5 +1,11 @@
 == Topic 1: Setup and Configuration
 :imagesdir: ../images
+:topic: 1
+
+[.notes]
+--
+_topicStart:Module-{module}-Topic-{topic}-Day-{day}_
+--
 
 image::setup-and-config.png[]
 
