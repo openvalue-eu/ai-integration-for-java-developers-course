@@ -1,5 +1,11 @@
 == Topic 2: Effective Prompting Techniques
 :imagesdir: ../images
+:topic: 2
+
+[.notes]
+--
+_topicStart:Module-{module}-Topic-{topic}-Day-{day}_
+--
 
 image::prompt-writing.png[]
 
@@ -94,7 +100,7 @@ image::prompt-writing.png[]
 **Instructor Notes:** 5 min discussion. Collect examples of prompts that didn't work well.
 --
 
-image::discussion.png[]
+image::discussion-5.jpg[]
 
 **Discussion Prompt:**
 "What makes a prompt too vague vs. too specific? How do you find the balance?"

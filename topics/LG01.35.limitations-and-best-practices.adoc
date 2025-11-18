@@ -1,4 +1,10 @@
 == Topic 5: Limitations and Best Practices
+:topic: 5
+
+[.notes]
+--
+_topicStart:Module-{module}-Topic-{topic}-Day-{day}_
+--
 
 === When Copilot Struggles
 [.notes]

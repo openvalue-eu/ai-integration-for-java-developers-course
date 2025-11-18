@@ -1,6 +1,11 @@
-= Module 4: AI Fundamentals for Java Developers and Java AI Libraries
+= Module 2: AI Fundamentals for Java Developers and Java AI Libraries
+:module: 2
+:duration: 1.5 hours
 
-Duration: 1.5 hours
+[.notes]
+--
+_moduleStart:Module-{module}-Day-{day}_
+--
 
 == Learning Objectives
 
@@ -12,7 +17,10 @@ Duration: 1.5 hours
 * Understand model training vs. inference in Java
 
 include::LG01.21.ai-fundamentals.adoc[]
-
+include::LG01.22.ai-libraries.adoc[]
+include::LG01.23.ai-djl.adoc[]
+include::LG01.24.ai-tribuo.adoc[]
+include::LG01.25.ai-dl4j.adoc[]
 
 == Module Summary
 

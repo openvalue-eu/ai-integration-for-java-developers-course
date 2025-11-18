@@ -1,0 +1,8 @@
+= Module 5: Building Your First AI-Enhanced Java Application
+:module: 5
+:duration: 2 hours
+
+[.notes]
+--
+_moduleStart:Module-{module}-Day-{day}_
+--

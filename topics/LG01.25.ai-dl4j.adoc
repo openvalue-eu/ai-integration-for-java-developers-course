@@ -1,0 +1,82 @@
+== Topic 5: Deep Learning with Deeplearning4J
+:imagesdir: ../images
+:topic: 5
+
+[.notes]
+--
+_topicStart:Module-{module}-Topic-{topic}-Day-{day}_
+--
+
+=== DL4J Overview and Architecture
+
+[.notes]
+--
+**Instructor Notes:** Position DL4J for teams wanting pure Java deep learning solution.
+--
+
+**DL4J Ecosystem:**
+[%step]
+--
+- **ND4J:** N-dimensional arrays (like NumPy for Java)
+- **DataVec:** ETL and data preprocessing
+- **DL4J:** Neural network training and inference
+- **RL4J:** Reinforcement learning
+- **Arbiter:** Hyperparameter optimization
+--
+
+**Best Use Cases:**
+[%step]
+--
+- Custom neural network architectures
+- Computer vision applications
+- NLP with custom models
+- Distributed training with Spark
+- Pure Java stack requirement
+--
+
+=== Setting Up Deeplearning4j
+
+[.notes]
+--
+**Instructor Notes:** Walk through Maven setup. Explain CPU vs GPU backend choice.
+--
+
+**Core Dependencies:**
+```xml
+<!-- DL4J Core -->
+<dependency>
+    <groupId>org.deeplearning4j</groupId>
+    <artifactId>deeplearning4j-core</artifactId>
+    <version>1.0.0-M2.1</version>
+</dependency>
+
+<!-- ND4J Backend - Choose ONE -->
+<!-- For CPU -->
+<dependency>
+    <groupId>org.nd4j</groupId>
+    <artifactId>nd4j-native-platform</artifactId>
+    <version>1.0.0-M2.1</version>
+</dependency>
+
+<!-- OR for GPU (requires CUDA) -->
+<dependency>
+    <groupId>org.nd4j</groupId>
+    <artifactId>nd4j-cuda-11.6-platform</artifactId>
+    <version>1.0.0-M2.1</version>
+</dependency>
+
+<!-- DataVec for data processing -->
+<dependency>
+    <groupId>org.datavec</groupId>
+    <artifactId>datavec-api</artifactId>
+    <version>1.0.0-M2.1</version>
+</dependency>
+```
+
+**Backend Selection:**
+[%step]
+--
+- **CPU (nd4j-native):** Easier setup, works everywhere
+- **GPU (nd4j-cuda):** Much faster training, requires NVIDIA GPU
+- Platform suffix includes all OS-specific binaries
+--

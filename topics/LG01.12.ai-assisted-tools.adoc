@@ -1,5 +1,11 @@
-== Topic 3: Overview of AI-Assisted Development Tools
+== Topic 2: Overview of AI-Assisted Development Tools
 :imagesdir: ../images
+:topic: 2
+
+[.notes]
+--
+_topicStart:Module-{module}-Topic-{topic}-Day-{day}_
+--
 
 image::ai-tool-copilot.jpg[]
 
@@ -137,7 +143,7 @@ image::demo-2.png[]
 **Instructor Notes:** 5-10 min discussion. Address common concerns proactively to remove adoption barriers.
 --
 
-image::discussion.png[]
+image::discussion-2.jpg[]
 
 **Discussion Prompt:**
 "What factors are most important for your organization? What concerns might prevent AI tool adoption?"

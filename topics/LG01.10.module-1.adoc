@@ -4,7 +4,7 @@
 
 [.notes]
 --
-_topicStart:Module-{module}-Day-{day}_
+_moduleStart:Module-{module}-Day-{day}_
 --
 
 Duration: 1 hour

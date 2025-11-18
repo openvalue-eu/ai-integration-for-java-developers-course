@@ -1,4 +1,10 @@
 == Topic 4: Advanced Copilot Features
+:topic: 4
+
+[.notes]
+--
+_topicStart:Module-{module}-Topic-{topic}-Day-{day}_
+--
 
 === Copilot Chat
 [.notes]
