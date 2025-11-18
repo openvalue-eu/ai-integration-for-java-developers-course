@@ -44,8 +44,8 @@ image::djl.jpg[]
 **Key Features:**
 [%step]
 --
-- Framework agnostic (PyTorch, TensorFlow, MXNet backends)
-- Pre-trained model zoo
+- Engine/Framework agnostic (PyTorch, TensorFlow, MXNet backends)
+- Supports both model loading from the model zoo and custom-trained models
 - Inference optimized for production
 - Strong AWS integration
 - Active development and support
