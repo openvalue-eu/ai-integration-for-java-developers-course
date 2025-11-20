@@ -17,6 +17,7 @@ Duration: 1 hour
 * Evaluate when to use AI vs. traditional approaches
 
 include::LG01.11.evolution-of-ai.adoc[]
+
 include::LG01.12.ai-assisted-tools.adoc[]
 
 == Module Summary

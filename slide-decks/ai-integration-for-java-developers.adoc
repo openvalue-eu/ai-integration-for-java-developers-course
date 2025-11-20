@@ -1,0 +1,51 @@
+== AI Integration for Java Developers
+:total-days: 2
+:course-name: AI Integration for Java Developers
+:imagesdir: ../images
+
+[.notes]
+--
+_courseStart:{course-name}_
+--
+
+image::course-cover.png[]
+
+=== Welcome & Course Overview
+
+[.notes]
+--
+**Instructor Notes:**
+[%step]
+--
+* Welcome participants
+* Brief introductions (name, role, AI experience)
+* Course objectives overview
+* Housekeeping (breaks, lunch, Q&A format)
+--
+--
+
+==== What to Expect of This Course
+
+By the end of this {total-days}-day course:
+[%step]
+--
+* Accelerate development with AI-assisted tools
+* Integrate AI capabilities into Java applications
+* Deploy AI-enhanced applications to production
+* Make informed decisions about AI integration
+--
+
+[.notes]
+--
+**Instructor Notes:**
+[%step]
+--
+* Set expectations: hands-on, practical focus
+* Emphasize: no prior AI experience required
+* Java 21+, Spring Boot 3, Maven, IntelliJ
+--
+--
+
+include::slides-day-1.adoc[]
+
+include::slides-day-2.adoc[]

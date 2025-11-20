@@ -101,7 +101,6 @@ image::masked-vs-autoregressive.png[Photo by Chip Huyen, height=200]
 [%step]
 --
 - Trained on massive text/code datasets
--
 - Explain what masked language models are.
 - Explain what autoregressive models are, and how it predicts next likely token based on context
 - What are the comparisons between masked, and autoregressive  models and how they use tokens differently.

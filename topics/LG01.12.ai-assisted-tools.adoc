@@ -12,7 +12,7 @@ image::ai-tool-copilot.jpg[]
 === Tool Landscape
 [.notes]
 --
-**Instructor Notes:** Give a brief explanation on the different categories of AI-assisted development tools.
+**Instructor Notes:** Give a brief explanation on the different categories of AI-assisted development tools. Empathise that not all tools are created equal, and it is crucial to cose the correct tool for the job.
 --
 
 **Key Categories:**

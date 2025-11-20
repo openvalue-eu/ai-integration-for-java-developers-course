@@ -1,4 +1,4 @@
-== Topic 1: Evolution of AI in Software Development
+== Evolution of AI in Software Development
 :imagesdir: ../images
 :topic: 1
 
@@ -9,11 +9,16 @@ _topicStart:Module-{module}-Topic-{topic}-Day-{day}_
 
 image::ai-evolution.png[]
 
+[.notes]
+--
+**Instructor Notes:** This topic will revolve around how AI has evolved. This includes traditional development, AI-augmented development, and AI collaboration. This topic will also deal with how the role of the developer has evolved from being a producer of code, to now being a curator.
+--
+
 === Automation: Era before AI (1990s-2010s)
 
 [.notes]
 --
-**Instructor Notes:** Show timeline of tool evolution. Explain how basic autocomplete worked through text matching, no intelligence involved.
+**Instructor Notes:** Set the tone of when developers relied on other development tools for increasing productivity, like Intelli-sense and static unit testing.
 --
 
 image::back-in-my-day.png[]
@@ -63,6 +68,23 @@ image::ai-tool-copilot.jpg[]
 - Still requires human review and testing
 --
 
+=== The Role of Developers in an AI-Powered World
+
+image::whole-new-world.gif[]
+
+[.notes]
+--
+**Instructor Notes:** Provide context on why AI has not completely replaced humans, but act as a tool to improve productivity. Make a point that a developer has now moved from being a code producer to being a code curator. Make sure to emphasise that even though AI can write code, a developer is still accountable for the code in Production.
+--
+
+**Key Points to Cover:**
+[%step]
+--
+- AI is a copilot rather than complete autopilot for writing code
+- The responsibilities of a developer
+- How the effectiveness of AI-assisted development tools often depends on the expertise of the developer
+- What career prospects has emerged for software developers since AI collaboration became mainstream
+--
 
 === Common Misconceptions
 * AI "understands" code like humans do (it doesn't - it's pattern matching)
