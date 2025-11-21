@@ -1,4 +1,4 @@
-== Topic 1: AI Fundamentals for Java Developers
+== AI Fundamentals for Java Developers
 :imagesdir: ../images
 :topic: 1
 

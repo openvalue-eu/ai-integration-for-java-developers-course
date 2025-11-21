@@ -1,4 +1,4 @@
-== Topic 4: Tribuo
+== Tribuo
 :imagesdir: ../images
 :topic: 4
 

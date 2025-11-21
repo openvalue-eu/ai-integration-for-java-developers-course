@@ -1,0 +1,43 @@
+== Measuring Impact
+
+=== Productivity Metrics to Track
+
+**Personal Metrics:**
+
+* Lines of code per day (with quality maintained)
+* Time spent on boilerplate vs. business logic
+* Code review rounds needed
+* Bug density in AI-assisted vs. manual code
+
+**Team Metrics:**
+
+* Story points completed per sprint
+* Developer satisfaction scores
+* Time to merge (PR cycle time)
+* Test coverage maintained or improved
+
+[.notes]
+--
+Track to demonstrate value and identify issues
+--
+
+=== Accenture Case Study
+
+**Scale:**
+
+* 50,000+ developers using Copilot
+* Enterprise-wide rollout
+
+**Results:**
+
+* **45%** reduction in time for simple tasks
+* **15-20%** overall productivity improvement
+* **Improved morale**: Less tedious work
+* **Faster onboarding**: New developers productive sooner
+
+**Key Learning:** Success requires training and culture change
+
+[.notes]
+--
+Real enterprise case study relevant to course audience
+--

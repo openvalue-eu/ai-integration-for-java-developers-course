@@ -1,4 +1,4 @@
-== Topic 1: Setup and Configuration
+== Setup and Configuration
 :imagesdir: ../images
 :topic: 1
 
@@ -48,6 +48,159 @@ image::setup-and-config.png[]
 5. Authorize Copilot access
 --
 
+=== IntelliJ IDEA Settings
+
+**Settings → Tools → GitHub Copilot**
+
+**Key Options:**
+
+* **Enable auto-completions**: Toggle inline suggestions
+* **Show completions automatically**: How quickly suggestions appear
+* **Suggestion display**: Inline vs. panel
+* **Excluded files**: Ignore specific paths
+* **Telemetry**: Data sharing preferences
+
+[.notes]
+--
+Show settings dialog during demo
+--
+
+=== Workspace-Level Configuration
+
+**Create `.github/copilot-instructions.md`:**
+
+```markdown
+# Project-Specific Guidelines
+
+## Code Style
+- Use constructor injection for dependencies
+- Prefer record types for DTOs (Java 21+)
+- Use Spring Boot 3 patterns
+
+## Naming Conventions
+- Controllers: Use `*Controller` suffix
+- Services: Use `*Service` suffix
+- Repositories: Extend `JpaRepository`
+
+## Frameworks
+- Spring Boot 3.2+
+- Java 21
+- JUnit 5 with AssertJ
+```
+
+**Effect:** Copilot follows these guidelines project-wide
+
+[.notes]
+--
+This is a powerful feature for team consistency
+Ensures AI-generated code matches team standards
+--
+
+=== Custom Instructions for Chat
+
+**Settings → Custom Instructions:**
+
+```
+When generating Java code:
+1. Use Java 21 features (records, pattern matching)
+2. Follow Spring Boot 3 conventions
+3. Include error handling and logging
+4. Generate JUnit 5 tests with AssertJ assertions
+5. Use SLF4J for logging, never System.out
+
+For REST endpoints:
+- Use ResponseEntity
+- Include OpenAPI annotations
+- Handle validation with @Valid
+```
+
+[.notes]
+--
+Custom instructions persist across sessions
+Improves consistency of generated code
+--
+
+=== Managing Copilot Suggestions
+
+**Keyboard Shortcuts:**
+
+* `Tab`: Accept entire suggestion
+* `Ctrl+→` (or `Cmd+→`): Accept word-by-word
+* `Alt+]`: Next suggestion
+* `Alt+[`: Previous suggestion
+* `Esc`: Dismiss suggestion
+
+**Tip:** Browse multiple suggestions before accepting
+
+[.notes]
+--
+Practice these shortcuts in upcoming lab
+--
+
+=== Open Tabs: Context Control
+
+**How It Works:**
+
+* Copilot reads open editor tabs for context
+* Related files = better suggestions
+* Strategic tab management improves results
+
+**Best Practice:**
+
+```
+Open tabs when working on feature:
+- Controller (current work)
+- Related Service
+- DTO/Entity models
+- Similar existing code
+```
+
+**Close unrelated tabs:** Reduces noise
+
+[.notes]
+--
+Underutilized feature that significantly impacts quality
+--
+
+=== Understanding .copilotignore
+[.notes]
+--
+**Instructor Notes:** Show example file. Emphasize importance for security-sensitive code.
+--
+
+**Key Points to Cover:**
+[%step]
+--
+- Similar to .gitignore syntax
+- Excludes files/folders from Copilot context
+- Use for: config files, credentials, proprietary algorithms
+- Example patterns: `*.properties`, `src/main/resources/application*.yml`
+--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 === Configuration Best Practices
 [.notes]
 --
@@ -72,17 +225,3 @@ image::setup-and-config.png[]
 - "How to prevent sensitive code exposure?" - Use .copilotignore file
 --
 
-=== Understanding .copilotignore
-[.notes]
---
-**Instructor Notes:** Show example file. Emphasize importance for security-sensitive code.
---
-
-**Key Points to Cover:**
-[%step]
---
-- Similar to .gitignore syntax
-- Excludes files/folders from Copilot context
-- Use for: config files, credentials, proprietary algorithms
-- Example patterns: `*.properties`, `src/main/resources/application*.yml`
---

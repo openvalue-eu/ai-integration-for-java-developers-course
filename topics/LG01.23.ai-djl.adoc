@@ -1,4 +1,4 @@
-== Topic 3: Deep Java Learning
+== Deep Java Learning
 :imagesdir: ../images
 :topic: 3
 

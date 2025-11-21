@@ -1,0 +1,282 @@
+== AI-Assisted Code Review
+
+=== The New Code Review Process
+
+**Traditional Review:**
+```
+1. Read code manually
+2. Check for bugs, style issues
+3. Verify business logic
+4. Provide feedback
+5. Iterate
+```
+
+**AI-Enhanced Review:**
+```
+1. AI performs initial scan
+2. Human reviews AI findings + business logic
+3. AI suggests improvements
+4. Human validates and approves
+5. Faster, more thorough iteration
+```
+
+[.notes]
+--
+AI augments, doesn't replace human judgment
+--
+
+=== What AI Excels at Reviewing
+
+**✅ AI Strengths:**
+
+* **Syntax and compilation issues**: Catches typos, missing semicolons
+* **Code style violations**: Indentation, naming conventions
+* **Common anti-patterns**: Obvious code smells
+* **Security vulnerabilities**: SQL injection, XSS patterns
+* **Performance issues**: N+1 queries, inefficient loops
+* **Test coverage gaps**: Missing edge cases
+* **Documentation completeness**: Missing JavaDoc
+
+[.notes]
+--
+AI handles mechanical review tasks efficiently
+--
+
+=== What Requires Human Judgment
+
+**❌ Human Required:**
+
+* **Business logic correctness**: Does it meet requirements?
+* **Architecture decisions**: Is this the right approach?
+* **Trade-off evaluation**: Performance vs. maintainability
+* **Domain knowledge**: Industry-specific rules
+* **Security context**: Is this sensitive data?
+* **Team conventions**: Project-specific patterns
+* **User experience impact**: How does this affect users?
+
+[.notes]
+--
+Critical distinction for effective AI use
+Human expertise remains essential
+--
+
+=== Code Review with Copilot Chat
+
+**Pattern 1: Security Review**
+
+```java
+// Select code block, then Chat:
+@PostMapping("/transfer")
+public ResponseEntity<Transfer> transferFunds(
+    @RequestBody TransferRequest request) {
+
+    String sql = "UPDATE accounts SET balance = balance - " +
+        request.getAmount() + " WHERE id = " + request.getFromAccount();
+
+    jdbcTemplate.execute(sql);
+    return ResponseEntity.ok(transfer);
+}
+
+// Chat: "Review this code for security vulnerabilities"
+```
+
+**Copilot Response:**
+```
+⚠️ Critical Issues Found:
+1. SQL Injection vulnerability - using string concatenation
+2. No authentication/authorization check
+3. No input validation for amount
+4. No transaction management
+5. Missing error handling
+
+Suggested Fix: [Shows PreparedStatement approach]
+```
+
+[.notes]
+--
+Demo this live with vulnerable code example
+--
+
+=== Code Review Pattern 2: Performance Analysis
+
+```java
+// Chat: "Review for performance issues"
+@GetMapping("/orders/{customerId}")
+public List<OrderDTO> getCustomerOrders(@PathVariable Long customerId) {
+    List<Order> orders = orderRepository.findByCustomerId(customerId);
+
+    return orders.stream()
+        .map(order -> {
+            // N+1 problem: loads customer for each order
+            Customer customer = customerRepository.findById(
+                order.getCustomerId()).orElse(null);
+
+            // Another N+1: loads items for each order
+            List<OrderItem> items = itemRepository.findByOrderId(
+                order.getId());
+
+            return OrderDTO.from(order, customer, items);
+        })
+        .collect(Collectors.toList());
+}
+```
+
+[.notes]
+--
+Source: AI-Assisted Programming (Ch.8)
+Classic N+1 query problem
+--
+
+=== Copilot's Performance Review
+
+**AI Identifies:**
+
+```
+Performance Issues:
+1. N+1 query problem with customer lookups
+2. N+1 query problem with order items
+3. Multiple database round trips per order
+
+Impact: 1 order = 3 queries, 100 orders = 201 queries!
+
+Recommendations:
+1. Use JOIN FETCH in repository query
+2. Use @EntityGraph for eager loading
+3. Consider DTO projection query
+
+[Shows optimized code with JOIN FETCH]
+```
+
+**Result:** 201 queries → 1 query
+
+[.notes]
+--
+AI excellent at identifying common performance patterns
+Must verify recommendations work with your data model
+--
+
+=== Code Review Pattern 3: Design Pattern Suggestions
+
+```java
+// Chat: "Suggest design patterns to improve this code"
+public class PaymentProcessor {
+    public void processPayment(Order order, String type) {
+        if (type.equals("CREDIT_CARD")) {
+            // Credit card processing logic
+            validateCard();
+            chargeCard();
+            sendReceipt();
+        } else if (type.equals("PAYPAL")) {
+            // PayPal processing logic
+            validatePayPal();
+            chargePayPal();
+            sendReceipt();
+        } else if (type.equals("BITCOIN")) {
+            // Bitcoin processing logic
+            validateBitcoin();
+            chargeBitcoin();
+            sendReceipt();
+        }
+        // More payment types...
+    }
+}
+```
+
+[.notes]
+--
+Classic example needing Strategy pattern
+--
+
+=== Copilot's Design Suggestion
+
+```
+Recommendation: Strategy Pattern
+
+This code violates Open/Closed Principle.
+Adding new payment types requires modifying this class.
+
+Suggested refactoring:
+1. Create PaymentStrategy interface
+2. Implement strategy for each payment type
+3. Use dependency injection to select strategy
+4. Eliminate conditional logic
+
+Benefits:
+- Easy to add new payment types
+- Better testability
+- Single Responsibility Principle
+- Dependency Inversion Principle
+
+[Shows complete Strategy pattern implementation]
+```
+
+[.notes]
+--
+AI good at recognizing patterns from its training
+Always validate suggestions against your context
+--
+
+=== Automated Code Review Tools
+
+**AI-Powered Tools:**
+
+[cols="2,3,2", options="header"]
+|===
+| Tool | Capabilities | Best For
+
+| **Amazon CodeGuru**
+| Security, performance, AWS best practices
+| AWS-based applications
+
+| **DeepCode/Snyk**
+| Security vulnerabilities, bug detection
+| Security-focused teams
+
+| **SonarQube with AI**
+| Code quality, security, maintainability
+| Enterprise teams
+
+| **GitHub Copilot Chat**
+| Interactive code review, explanations
+| Daily development
+
+| **Tabnine Code Review**
+| Team standards compliance
+| Custom coding standards
+|===
+
+[.notes]
+--
+These integrate into CI/CD pipelines
+--
+
+=== Integrating AI into PR Review Process
+
+**Enhanced PR Workflow:**
+
+```
+1. Developer creates PR
+   ↓
+2. AI automated checks run
+   - Code style (linting)
+   - Security scan (CodeGuru/Snyk)
+   - Test coverage analysis
+   - Performance hotspot detection
+   ↓
+3. AI generates summary of changes
+   - What changed and why
+   - Potential issues flagged
+   - Suggested improvements
+   ↓
+4. Human reviewer focuses on:
+   - Business logic correctness
+   - Architecture decisions
+   - AI findings validation
+   ↓
+5. Faster, higher-quality approvals
+```
+
+[.notes]
+--
+AI handles mechanical checks, humans focus on strategy
+--

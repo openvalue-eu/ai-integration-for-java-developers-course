@@ -1,4 +1,4 @@
-== Topic 2: Effective Prompting Techniques
+== Effective Prompting Fundamentals
 :imagesdir: ../images
 :topic: 2
 
@@ -9,11 +9,30 @@ _topicStart:Module-{module}-Topic-{topic}-Day-{day}_
 
 image::prompt-writing.png[]
 
-=== Comment-Driven Development
+=== The Comment-Driven Development Approach
 [.notes]
 --
 **Instructor Notes:** Demonstrate live. Show how comment quality affects suggestion quality.
 --
+
+**Traditional:**
+```java
+public class UserService {
+    // TODO: implement user validation
+}
+```
+
+**AI-Assisted:**
+```java
+public class UserService {
+    // Validate user input: check email format,
+    // password strength (min 8 chars, 1 uppercase, 1 number),
+    // username uniqueness. Return validation errors as a list.
+
+    // Copilot generates complete implementation ↓
+}
+```
+
 
 **Key Principles:**
 [%step]
@@ -23,18 +42,28 @@ image::prompt-writing.png[]
 - Specify error handling requirements
 - Mention framework/library preferences (Spring, JPA, etc.)
 --
-**Example:**
-```
-// Create a method to calculate compound interest
-// Parameters: principal (double), rate (double), time (int), frequency (int)
-// Returns: final amount as BigDecimal
-// Handle negative values by throwing IllegalArgumentException
-```
+
+=== Anatomy of an Effective Prompt
+
+[.notes]
+--
+This structure applies to comments, chat, and general AI interaction
+--
+
+**The 5 Elements:**
+[%step]
+--
+1. **Context**: What are we building?
+2. **Action**: What should the code do?
+3. **Constraints**: Any requirements or limitations?
+4. **Format**: Expected input/output structure
+5. **Examples**: Show what you mean (optional)
+--
 
 === Context Matters: File and Project Context
 [.notes]
 --
-**Instructor Notes:** Show how Copilot uses surrounding code. Open multiple related files.
+**Instructor Notes:** Explain the importance of context regarding effective prompting. It could be handy to use Masked and Autoregressive explain how they react differently to prompting.
 --
 **Key Points to Cover:**
 [%step]
@@ -46,53 +75,103 @@ image::prompt-writing.png[]
 - Adapts to coding style
 --
 
-=== Prompt Patterns for Java Development
+=== Example: Poor vs. Good Prompts
+
 [.notes]
 --
-**Instructor Notes:** Provide template patterns participants can reuse. Show before/after examples.
---
-
-**Common Patterns:**
-
-**CRUD Operations:**
-```
-// Create a JPA repository method to find all users by email domain
-// Return List<User>, parameter: String emailDomain
-```
-
-**REST Controllers:**
-```
-// Create Spring REST controller endpoint for POST /api/orders
-// Accepts OrderRequest DTO, returns OrderResponse
-// Include validation and error handling
-```
-
-**Service Layer:**
-```
-// Implement service method to process payment transaction
-// Use PaymentGateway interface, handle timeout exceptions
-// Log all transactions, return TransactionResult
-```
-
-=== Iterative Refinement
-[.notes]
---
-**Instructor Notes:** Demonstrate accepting partial suggestion, then refining with additional prompts.
---
-
-**Key Technique:**
+**Instructor Notes:**
 [%step]
 --
-1. Accept initial Copilot suggestion
-2. Add refinement comment above
-3. Let Copilot adjust implementation
-4. Repeat until satisfactory
+- Show live: Type poor prompt, then good prompt
+- Demonstrate the difference in quality
 --
-**Example Refinement:**
+--
+
+**❌ Poor Prompt:**
+```java
+// create method for users
 ```
-// Also add caching using Spring @Cacheable
-// Cache key should be userId + dateRange
+
+**✅ Good Prompt:**
+```java
+// Create a method that retrieves a paginated list of users
+// from the database. Parameters: page number (0-indexed),
+// page size (max 100). Return a Page<UserDTO> with total count.
+// Throw UserServiceException if page parameters are invalid.
 ```
+
+**Result:** Complete, accurate implementation with error handling
+
+=== Prompt Engineering Principles
+
+**1. Be Explicit, Not Implicit**
+```java
+// Bad: "validate the input"
+// Good: "validate that email matches RFC 5322,
+//       phone follows E.164 format"
+```
+
+**2. Break Complex Tasks Down**
+```java
+// Instead of: "create complete user registration system"
+// Do: Step 1: "create UserRegistrationRequest DTO with validation"
+//     Step 2: "create registration service method"
+//     Step 3: "create REST endpoint with proper error handling"
+```
+
+[.notes]
+--
+Incremental approach = better results
+--
+
+**3. Provide Examples When Needed**
+```java
+// Generate a builder for Asset class following this pattern:
+// Example: User.builder()
+//              .name("John")
+//              .email("john@example.com")
+//              .build();
+```
+
+**4. Specify Framework Conventions**
+```java
+// Create a Spring Boot REST controller for Products
+// Use @RestController, @RequestMapping("/api/v1/products")
+// Follow standard HTTP methods (GET, POST, PUT, DELETE)
+// Return ResponseEntity with appropriate status codes
+```
+
+[.notes]
+--
+Framework specificity prevents outdated or incorrect patterns
+--
+
+=== Common Pitfalls to Avoid
+
+**Pitfall 1: Vague Requirements**
+```java
+// Get user data ← Too vague
+// Retrieve user by ID from database, including their roles
+// and last login timestamp ← Better
+```
+
+**Pitfall 2: Missing Context**
+```java
+// Without context: Copilot might generate SQL
+// With context (in a JPA repository): Generates JPQL
+```
+
+**Pitfall 3: Accepting First Suggestion**
+```java
+// Try: Generate 3 different suggestions
+// Tab through alternatives
+// Or use Chat to refine
+```
+
+[.notes]
+--
+Emphasize: Iteration is normal and expected
+--
 
 === Discussion: Prompt Engineering Challenges
 [.notes]

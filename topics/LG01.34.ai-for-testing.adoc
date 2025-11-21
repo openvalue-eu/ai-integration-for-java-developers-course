@@ -1,0 +1,110 @@
+== Copilot for Testing
+
+=== Automated Test Generation
+
+**Use Case:** JUnit 5 unit tests
+```java
+public class OrderService {
+    public Order createOrder(OrderRequest request) {
+        // ... implementation
+    }
+}
+
+// Select method, Chat: "/tests"
+// Or comment: "Generate JUnit 5 tests with Mockito
+//             covering happy path and edge cases"
+```
+
+**Copilot Generates:**
+
+* Setup and teardown
+* Happy path tests
+* Edge cases
+* Exception scenarios
+* Mock configurations
+
+[.notes]
+--
+Show live generation of test class
+--
+
+=== Test Patterns Copilot Understands
+
+**1. Arrange-Act-Assert (AAA)**
+```java
+// Test user registration with valid data
+@Test
+void shouldCreateUserWithValidData() {
+    // Copilot generates full AAA structure
+}
+```
+
+**2. Given-When-Then (BDD)**
+```java
+// Given a user with valid credentials
+// When they attempt to login
+// Then they should receive an access token
+```
+
+**3. Parameterized Tests**
+```java
+// Test email validation with multiple invalid formats
+@ParameterizedTest
+// Copilot generates @ValueSource and test data
+```
+
+=== Integration Test Assistance
+
+**Scenario:** Testing REST endpoints
+
+```java
+// Create a Spring Boot test for POST /api/users
+// Use @SpringBootTest, @AutoConfigureMockMvc
+// Mock the UserService
+// Test: successful creation (201), validation errors (400)
+
+@SpringBootTest
+@AutoConfigureMockMvc
+class UserControllerIntegrationTest {
+    // Copilot generates complete test setup
+}
+```
+
+**What Copilot Provides:**
+
+* Proper annotations
+* MockMvc setup
+* Request/response handling
+* JSON assertions
+
+[.notes]
+--
+Integration tests require more context than unit tests
+--
+
+=== Test Data Generation
+
+**Problem:** Need realistic test data
+
+```java
+// Generate 5 test users with different roles and statuses
+// Include edge cases: null values, empty strings, max lengths
+```
+
+**Copilot Creates:**
+```java
+@BeforeEach
+void setUp() {
+    testUsers = Arrays.asList(
+        User.builder().name("John Doe")
+            .email("john@example.com").build(),
+        User.builder().name("").email("invalid").build(),
+        // ... more cases
+    );
+}
+```
+
+[.notes]
+--
+Saves significant time in test preparation
+--

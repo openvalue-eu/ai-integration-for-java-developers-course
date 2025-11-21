@@ -1,4 +1,4 @@
-== Topic 2: Overview of AI-Assisted Development Tools
+== Overview of AI-Assisted Development Tools
 :imagesdir: ../images
 :topic: 2
 

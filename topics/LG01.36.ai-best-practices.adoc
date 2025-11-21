@@ -1,0 +1,215 @@
+== Best Practices for Java Developers
+
+=== Domain Model First
+
+**Workflow:**
+
+```java
+// 1. Define entity with Copilot
+@Entity
+public class Product {
+    // Comment describing all fields
+    // Copilot generates complete entity
+}
+
+// 2. Create DTO (opens Product.java in adjacent tab)
+// Convert Product entity to DTO with validation annotations
+
+// 3. Generate repository
+// Create JPA repository for Product with custom queries
+
+// 4. Build service
+// Create ProductService with CRUD operations and business logic
+
+// 5. Create controller
+// Create REST controller for Product management
+```
+
+[.notes]
+--
+Bottom-up approach works well with Copilot
+--
+
+=== Configuration as Comments
+
+**Application Setup:**
+
+```java
+// Create Spring Boot configuration for:
+// - PostgreSQL database with HikariCP pool (max 10 connections)
+// - Redis cache with 1-hour default TTL
+// - CORS allowing localhost:3000 for development
+// - JWT authentication with 24-hour token expiry
+// - OpenAPI documentation at /api-docs
+
+@Configuration
+public class ApplicationConfig {
+    // Copilot generates beans
+}
+```
+
+**Result:** Complete, correct configuration classes
+
+[.notes]
+--
+Declarative approach to configuration
+Always review security-related config
+--
+
+=== Test-Driven with Copilot
+
+**Modified TDD Workflow:**
+
+```java
+// 1. Write test description as comment
+// Test that calculateDiscount returns 10% off
+// for orders over $100 with "SAVE10" coupon code
+
+@Test
+void shouldApplyDiscountForValidCoupon() {
+    // 2. Let Copilot generate test
+    // 3. Verify test logic
+    // 4. Run test (fails - no implementation)
+}
+
+// 5. Create method signature
+public BigDecimal calculateDiscount(Order order, String couponCode) {
+    // 6. Comment expected logic
+    // 7. Let Copilot implement
+    // 8. Run tests (should pass)
+}
+```
+
+[.notes]
+--
+TDD + AI = powerful combination
+--
+
+=== Refactoring Safely
+
+**Approach:**
+
+```java
+// 1. Write comprehensive tests for existing code
+// Chat: "/tests generate comprehensive test suite"
+
+// 2. Document refactoring intent
+// Chat: "Refactor this method to use Strategy pattern
+//        while maintaining existing behavior"
+
+// 3. Review Copilot's refactoring
+
+// 4. Run tests to verify behavior unchanged
+
+// 5. Commit refactored code
+```
+
+**Key:** Tests provide safety net for AI refactoring
+
+[.notes]
+--
+Never refactor without tests
+--
+
+=== Code Review Checklist for AI Code
+
+**Always Verify:**
+
+☑ **Business logic correctness**
+[%step]
+--
+- Does it actually solve the problem?
+- Edge cases handled?
+--
+
+☑ **Security**
+[%step]
+--
+- Input validation present?
+- SQL injection protection?
+- Authentication/authorization correct?
+--
+
+☑ **Performance**
+[%step]
+--
+- N+1 queries avoided?
+- Appropriate caching?
+- Resource cleanup (streams, connections)?
+--
+
+[.notes]
+--
+AI code requires same rigor as human code
+--
+
+☑ **Framework Conventions**
+[%step]
+--
+- Spring Boot 3 patterns used?
+- Correct annotations?
+- Dependency injection properly implemented?
+--
+
+☑ **Error Handling**
+[%step]
+--
+- Exceptions caught appropriately?
+- Logging at correct levels?
+- User-friendly error messages?
+--
+
+☑ **Testing**
+[%step]
+--
+- Tests actually test the behavior?
+- Mocks used correctly?
+- Edge cases covered?
+--
+
+[.notes]
+--
+Make this checklist part of team standards
+AI-generated code is not "trusted" code
+--
+
+=== Legal and Licensing Concerns
+[.notes]
+--
+**Instructor Notes:** Brief overview of intellectual property considerations.
+--
+
+**Key Points:**
+[%step]
+--
+- Copilot trained on public repositories
+- Some code may match training data closely
+- GitHub's position on copyright
+- Your organization's policies
+- When to check suggestions against public code
+--
+
+**Common Concerns to Address:**
+[%step]
+--
+- "Could we violate someone's copyright?" - Possible but rare; check similar code
+- "Who owns AI-generated code?" - Your organization, per GitHub's terms
+- "Should we disclose AI usage?" - Check your org's policies
+--
+
+=== Discussion: Governance and Guidelines
+[.notes]
+--
+**Instructor Notes:** 5 min discussion. Help participants think through team policies.
+--
+
+**Discussion Prompt:**
+"What guidelines should your team establish for using Copilot? Who reviews AI-generated code? What's prohibited?"
+
+**Common Concerns to Address:**
+[%step]
+--
+- "Do we need approval before using Copilot?" - Depends on organization
+- "Should we track which code came from AI?" - Consider for audit purposes
+- "Can junior developers use Copilot unsupervised?" - Requires senior review
+--

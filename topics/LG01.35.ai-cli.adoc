@@ -1,0 +1,74 @@
+== Copilot CLI: Terminal Productivity
+
+=== Overview of Copilot CLI
+
+**What It Does:**
+
+* Translates natural language → shell commands
+* Explains complex commands
+* Suggests command alternatives
+
+**Installation:**
+```bash
+gh extension install github/gh-copilot
+```
+
+**Basic Usage:**
+```bash
+# Suggest a command
+gh copilot suggest "find all java files modified today"
+
+# Explain a command
+gh copilot explain "kubectl get pods -A"
+```
+
+[.notes]
+--
+Great for DevOps tasks
+--
+
+=== CLI Use Cases for Java Developers
+
+**1. Git Operations**
+```bash
+gh copilot suggest "undo last commit but keep changes"
+# Suggests: git reset --soft HEAD~1
+```
+
+**2. Maven/Build Commands**
+```bash
+gh copilot suggest "run spring boot app with debug profile"
+# Suggests: mvn spring-boot:run -Dspring-boot.run.profiles=debug
+```
+
+**3. Docker Operations**
+```bash
+gh copilot suggest "remove all stopped containers and unused images"
+# Suggests: docker system prune -a
+```
+
+[.notes]
+--
+CLI particularly helpful for infrequent commands
+Reduces time searching documentation
+--
+
+**4. Kubernetes Management**
+```bash
+gh copilot suggest "get logs from all pods in namespace myapp"
+# Suggests appropriate kubectl command
+
+gh copilot explain "kubectl rollout restart deployment/myapp"
+# Explains: restarts deployment, maintains zero-downtime
+```
+
+**5. Log Analysis**
+```bash
+gh copilot suggest "find ERROR in last 1000 lines of app.log"
+# Suggests: tail -n 1000 app.log | grep ERROR
+```
+
+[.notes]
+--
+Kubernetes-certified audience will appreciate these examples
+--

@@ -1,4 +1,4 @@
-== Topic 5: Deep Learning with Deeplearning4J
+== Deep Learning with Deeplearning4J
 :imagesdir: ../images
 :topic: 5
 

@@ -1,0 +1,200 @@
+== Code Smells and Anti-Patterns
+
+=== Common Java Code Smells AI Detects
+
+**1. Long Method**
+```java
+// Chat: "Identify code smells in this method"
+public void processOrder(Order order) {
+    // 200 lines of code doing everything
+    validateOrder(order);
+    calculateTax(order);
+    applyDiscounts(order);
+    updateInventory(order);
+    chargeCustomer(order);
+    sendConfirmation(order);
+    updateAnalytics(order);
+    // ... more logic
+}
+```
+
+**AI Suggestion:** Extract methods for each responsibility
+
+[.notes]
+--
+Long Method is a classic code smell
+--
+
+=== Code Smell: God Class
+```java
+// Chat: "What's wrong with this class design?"
+public class OrderManager {
+    // Handles orders
+    public void createOrder() { }
+    public void cancelOrder() { }
+
+    // Handles inventory
+    public void updateStock() { }
+    public void checkAvailability() { }
+
+    // Handles payments
+    public void processPayment() { }
+    public void refundPayment() { }
+
+    // Handles notifications
+    public void sendEmail() { }
+    public void sendSMS() { }
+
+    // Handles analytics
+    public void trackEvent() { }
+    public void generateReport() { }
+}
+```
+
+[.notes]
+--
+Violates Single Responsibility Principle
+AI recognizes multiple responsibilities
+--
+
+=== Copilot's Analysis
+
+```
+Issues Identified:
+1. Violates Single Responsibility Principle
+2. God Class anti-pattern
+3. High coupling, low cohesion
+4. Difficult to test
+5. Hard to maintain
+
+Suggested Refactoring:
+- Split into 5 separate classes:
+  * OrderService
+  * InventoryService
+  * PaymentService
+  * NotificationService
+  * AnalyticsService
+
+- Use dependency injection
+- Apply Facade pattern if needed for client simplification
+
+[Shows refactored class structure]
+```
+
+[.notes]
+--
+AI provides architectural guidance
+Human validates if suggestion fits system design
+--
+
+=== Code Smell: Primitive Obsession
+
+```java
+// Chat: "How can I improve this method signature?"
+public boolean validateUser(
+    String firstName,
+    String lastName,
+    String email,
+    String phone,
+    String address,
+    String city,
+    String state,
+    String zip
+) {
+    // validation logic
+}
+```
+
+**AI Recommendation:**
+```java
+// Use value objects instead
+public record UserRegistration(
+    PersonName name,
+    Email email,
+    PhoneNumber phone,
+    Address address
+) {
+    // Validation in constructors
+}
+
+public boolean validateUser(UserRegistration registration) {
+    // Much cleaner!
+}
+```
+
+[.notes]
+--
+AI suggests domain-driven design improvements
+--
+
+=== Code Smell: Feature Envy
+
+```java
+// Chat: "Review this for design issues"
+public class OrderReport {
+    public BigDecimal calculateTotal(Order order) {
+        return order.getItems().stream()
+            .map(item -> item.getPrice()
+                .multiply(BigDecimal.valueOf(item.getQuantity())))
+            .reduce(BigDecimal.ZERO, BigDecimal::add);
+    }
+
+    public int getItemCount(Order order) {
+        return order.getItems().size();
+    }
+
+    public BigDecimal getAverageItemPrice(Order order) {
+        return calculateTotal(order)
+            .divide(BigDecimal.valueOf(getItemCount(order)));
+    }
+}
+```
+
+**Issue:** OrderReport knows too much about Order internals
+
+[.notes]
+--
+Feature Envy: method more interested in other class
+Should be methods on Order, not OrderReport
+--
+
+=== Copilot's Refactoring Suggestion
+
+```
+Problem: Feature Envy
+OrderReport is "envious" of Order's features.
+
+Suggested Fix: Move methods to Order class
+
+public class Order {
+    // These belong here, not in OrderReport
+    public BigDecimal calculateTotal() {
+        return items.stream()
+            .map(item -> item.getPrice()
+                .multiply(BigDecimal.valueOf(item.getQuantity())))
+            .reduce(BigDecimal.ZERO, BigDecimal::add);
+    }
+
+    public int getItemCount() {
+        return items.size();
+    }
+
+    public BigDecimal getAverageItemPrice() {
+        return calculateTotal()
+            .divide(BigDecimal.valueOf(getItemCount()));
+    }
+}
+
+// OrderReport now just formats/displays
+public class OrderReport {
+    public String format(Order order) {
+        return "Total: " + order.calculateTotal();
+    }
+}
+```
+
+[.notes]
+--
+Follows "Tell, Don't Ask" principle
+Data and behavior should be together
+--

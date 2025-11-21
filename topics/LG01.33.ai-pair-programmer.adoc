@@ -1,0 +1,207 @@
+== GitHub Copilot Chat: Your AI Pair Programmer
+
+=== Chat Interface Overview
+
+**Access Methods:**
+
+* **Inline Chat**: `Ctrl+I` (Windows/Linux) or `Cmd+I` (Mac)
+* **Side Panel**: View → Tool Windows → GitHub Copilot Chat
+* **Quick Chat**: `Ctrl+Shift+I` (Windows/Linux) or `Cmd+Shift+I` (Mac)
+
+**When to Use Each:**
+
+* **Inline:** Quick edits, explanations in context
+* **Side Panel:** Extended conversations, multiple questions
+* **Quick Chat:** One-off questions without switching focus
+
+[.notes]
+--
+Demo each interface method
+--
+
+=== Slash Commands: Power User Features
+
+[cols="2,3,3", options="header"]
+|===
+| Command | Purpose | Example
+
+| `/explain`
+| Understand code
+| Explain what this regex does
+
+| `/fix`
+| Debug issues
+| Fix the NullPointerException
+
+| `/tests`
+| Generate tests
+| Generate JUnit 5 tests for this method
+
+| `/doc`
+| Create documentation
+| Add JavaDoc with param descriptions
+
+| `/optimize`
+| Improve performance
+| Suggest optimizations for this query
+
+| `/new`
+| Scaffold code
+| Create a new REST controller for Orders
+|===
+
+[.notes]
+--
+These are time-savers for common tasks
+--
+
+=== Chat Pattern: Code Explanation
+
+**Scenario:** Understanding unfamiliar code
+
+```java
+// Select complex code, then:
+// Chat: "/explain What does this Stream pipeline do?"
+
+return orders.stream()
+    .filter(o -> o.getStatus() == OrderStatus.PENDING)
+    .collect(Collectors.groupingBy(
+        Order::getCustomerId,
+        Collectors.summingDouble(Order::getTotal)
+    ));
+```
+
+**Copilot Explains:**
+
+* Filters for pending orders
+* Groups by customer
+* Sums order totals per customer
+* Returns Map<CustomerId, Total>
+
+[.notes]
+--
+Show live example with your own complex code
+--
+
+=== Chat Pattern: Debugging
+
+**Scenario:** Tracking down a bug
+
+```
+You: This method throws ConcurrentModificationException.
+     Why and how do I fix it?
+
+Copilot: The exception occurs because you're modifying
+         the list while iterating. Here are 3 solutions:
+         1. Use Iterator.remove()
+         2. Create a copy for iteration
+         3. Use streams with filter
+
+         [Shows code examples for each]
+```
+
+**Best Practice:** Provide error messages and context
+
+[.notes]
+--
+Real debugging scenario from your experience
+--
+
+=== Chat Pattern: Refactoring Assistance
+
+**Example Dialog:**
+
+```
+You: How can I refactor this 200-line method?
+
+Copilot: I see several opportunities:
+1. Extract validation into separate method
+2. Move business logic to service layer
+3. Use Strategy pattern for payment processing
+4. Extract constants for magic numbers
+
+Would you like me to show refactoring for any of these?
+
+You: Show me the Strategy pattern refactoring
+
+Copilot: [Generates PaymentStrategy interface and implementations]
+```
+
+[.notes]
+--
+Emphasize: Copilot helps identify patterns
+--
+
+=== Chat Pattern: Learning New Concepts
+
+**Scenario:** Understanding Spring Boot features
+
+```
+You: Explain @Transactional propagation in Spring Boot.
+     Give examples of when to use REQUIRED vs REQUIRES_NEW
+
+Copilot: [Provides explanation with code examples]
+
+You: Show me a scenario where REQUIRES_NEW prevents
+     data inconsistency
+
+Copilot: [Creates concrete example with banking transaction]
+```
+
+**Use Chat as:** Tutor, reference, example generator
+
+[.notes]
+--
+Copilot Chat excellent for learning while coding
+--
+
+=== Advanced Chat Techniques
+
+**1. Context References**
+```
+Chat: @workspace How do we handle authentication in this project?
+```
+*Searches all project files*
+
+**2. Multi-turn Refinement**
+```
+You: Create a product service
+Copilot: [generates basic service]
+You: Add caching with 5-minute TTL
+Copilot: [adds @Cacheable]
+You: Include cache invalidation on updates
+Copilot: [adds @CacheEvict]
+```
+
+[.notes]
+--
+@workspace is powerful for project-specific questions
+--
+
+**3. Architectural Questions**
+```
+You: What's the best way to implement rate limiting
+     in this Spring Boot app? Consider we're using Redis.
+
+Copilot: I recommend using Spring AOP with Redis:
+         [Shows interceptor approach with code]
+
+         Alternatively, you could use Bucket4j:
+         [Shows Bucket4j configuration]
+
+         For your use case, AOP approach is simpler because
+         you already have Redis configured.
+```
+
+**4. Framework-Specific Guidance**
+```
+You: Show me the Spring Boot 3 way to configure
+     security for JWT authentication
+```
+
+[.notes]
+--
+Chat excels at comparing approaches
+Always verify security recommendations
+--
+

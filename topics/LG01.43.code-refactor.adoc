@@ -1,0 +1,244 @@
+== Refactoring with AI Assistance
+
+=== Safe Refactoring Workflow
+
+**Step-by-Step Process:**
+
+```
+1. Ensure comprehensive test coverage
+   - Run existing tests
+   - Generate missing tests with AI
+   - Verify all tests pass
+
+2. Identify refactoring opportunity
+   - Use AI to analyze code smells
+   - Prioritize based on impact
+
+3. Plan refactoring approach
+   - Ask AI for strategy
+   - Review multiple options
+
+4. Apply refactoring incrementally
+   - Small, testable changes
+   - Run tests after each change
+
+5. Verify behavior unchanged
+   - All tests still pass
+   - Manual testing of critical paths
+
+6. Commit and document
+```
+
+[.notes]
+--
+Safety comes from tests + incremental changes
+--
+
+=== Refactoring Pattern: Extract Method
+
+**Before:**
+```java
+public void generateInvoice(Order order) {
+    // Calculate totals
+    BigDecimal subtotal = order.getItems().stream()
+        .map(i -> i.getPrice().multiply(
+            BigDecimal.valueOf(i.getQuantity())))
+        .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+    BigDecimal tax = subtotal.multiply(new BigDecimal("0.08"));
+    BigDecimal total = subtotal.add(tax);
+
+    // Generate PDF
+    Document document = new Document();
+    document.add(new Paragraph("Invoice"));
+    document.add(new Paragraph("Subtotal: " + subtotal));
+    document.add(new Paragraph("Tax: " + tax));
+    document.add(new Paragraph("Total: " + total));
+
+    // Send email
+    emailService.send(order.getCustomer().getEmail(),
+        "Invoice", document);
+}
+```
+
+**Prompt:** "Refactor this method using Extract Method pattern"
+
+[.notes]
+--
+Classic refactoring scenario
+Method doing too much
+--
+
+=== After Refactoring
+
+```java
+public void generateInvoice(Order order) {
+    InvoiceCalculation calc = calculateInvoiceTotals(order);
+    Document pdf = createInvoiceDocument(calc);
+    sendInvoiceEmail(order.getCustomer(), pdf);
+}
+
+private InvoiceCalculation calculateInvoiceTotals(Order order) {
+    BigDecimal subtotal = order.getItems().stream()
+        .map(i -> i.getPrice().multiply(
+            BigDecimal.valueOf(i.getQuantity())))
+        .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+    BigDecimal tax = subtotal.multiply(TAX_RATE);
+    BigDecimal total = subtotal.add(tax);
+
+    return new InvoiceCalculation(subtotal, tax, total);
+}
+
+private Document createInvoiceDocument(InvoiceCalculation calc) {
+    Document document = new Document();
+    document.add(new Paragraph("Invoice"));
+    document.add(new Paragraph("Subtotal: " + calc.subtotal()));
+    document.add(new Paragraph("Tax: " + calc.tax()));
+    document.add(new Paragraph("Total: " + calc.total()));
+    return document;
+}
+
+private void sendInvoiceEmail(Customer customer, Document pdf) {
+    emailService.send(customer.getEmail(), "Invoice", pdf);
+}
+```
+
+[.notes]
+--
+Much more readable and testable
+Each method has single responsibility
+--
+
+=== Refactoring Pattern: Replace Conditional with Polymorphism
+
+**Before:**
+```java
+public class ShippingCostCalculator {
+    public BigDecimal calculate(Order order, String shippingType) {
+        if (shippingType.equals("STANDARD")) {
+            return order.getWeight().multiply(new BigDecimal("0.50"));
+        } else if (shippingType.equals("EXPRESS")) {
+            return order.getWeight().multiply(new BigDecimal("1.50"))
+                .add(new BigDecimal("5.00"));
+        } else if (shippingType.equals("OVERNIGHT")) {
+            return order.getWeight().multiply(new BigDecimal("3.00"))
+                .add(new BigDecimal("15.00"));
+        }
+        throw new IllegalArgumentException("Unknown shipping type");
+    }
+}
+```
+
+**Prompt:** "Refactor using Strategy pattern to eliminate conditionals"
+
+[.notes]
+--
+Common refactoring to improve extensibility
+--
+
+=== Refactored with Strategy Pattern
+
+```java
+// Strategy interface
+public interface ShippingStrategy {
+    BigDecimal calculate(Order order);
+}
+
+// Implementations
+public class StandardShipping implements ShippingStrategy {
+    @Override
+    public BigDecimal calculate(Order order) {
+        return order.getWeight().multiply(new BigDecimal("0.50"));
+    }
+}
+
+public class ExpressShipping implements ShippingStrategy {
+    @Override
+    public BigDecimal calculate(Order order) {
+        return order.getWeight().multiply(new BigDecimal("1.50"))
+            .add(new BigDecimal("5.00"));
+    }
+}
+
+// Calculator now uses strategy
+public class ShippingCostCalculator {
+    public BigDecimal calculate(Order order, ShippingStrategy strategy) {
+        return strategy.calculate(order);
+    }
+}
+```
+
+**Benefits:** Easy to add new shipping types, better testability
+
+[.notes]
+--
+Open/Closed Principle: open for extension, closed for modification
+AI guides you through pattern implementation
+--
+
+=== Refactoring Legacy Code
+
+**Scenario:** Working with legacy COBOL-style Java
+
+```java
+// Chat: "Modernize this legacy code to use Java 21 features"
+public List<String> getActiveUserNames() {
+    List<String> result = new ArrayList<>();
+    List<User> users = userRepository.findAll();
+
+    for (int i = 0; i < users.size(); i++) {
+        User user = users.get(i);
+        if (user.getStatus().equals("ACTIVE")) {
+            String name = user.getFirstName() + " " + user.getLastName();
+            result.add(name);
+        }
+    }
+
+    return result;
+}
+```
+
+[.notes]
+--
+Common scenario: modernizing old Java code
+--
+
+=== Modernized Code
+
+```java
+// Copilot suggests Java 21 modern approach
+public List<String> getActiveUserNames() {
+    return userRepository.findAll().stream()
+        .filter(user -> user.getStatus() == UserStatus.ACTIVE)
+        .map(user -> "%s %s".formatted(
+            user.getFirstName(),
+            user.getLastName()))
+        .toList();  // Java 16+ toList()
+}
+
+// Or even better with Records and Pattern Matching (Java 21)
+public List<String> getActiveUserNames() {
+    return userRepository.findAllActive().stream()
+        .map(user -> user.fullName())
+        .toList();
+}
+
+// User.java (using record)
+public record User(
+    Long id,
+    String firstName,
+    String lastName,
+    UserStatus status
+) {
+    public String fullName() {
+        return "%s %s".formatted(firstName, lastName);
+    }
+}
+```
+
+[.notes]
+--
+AI helps modernize to current Java idioms
+Always specify Java version in prompt
+--

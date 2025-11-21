@@ -1,4 +1,4 @@
-== Topic 2: Java AI Libraries
+== Java AI Libraries
 :imagesdir: ../images
 :topic: 2
 
@@ -30,6 +30,7 @@ image::library.jpg[]
 - Weka (traditional ML, research-oriented)
 - MOA (streaming data)
 - Smile (statistical ML)
+- LangChain4j
 --
 
 === Deep Java Library (DJL)

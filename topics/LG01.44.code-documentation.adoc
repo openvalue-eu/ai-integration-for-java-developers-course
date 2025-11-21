@@ -1,0 +1,199 @@
+== Documentation with AI
+
+=== Generating JavaDoc
+
+**Pattern: Comment-to-JavaDoc**
+
+```java
+// Chat: "/doc Generate comprehensive JavaDoc"
+public class UserService {
+
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
+
+    public User createUser(UserRegistrationRequest request) {
+        validateRequest(request);
+
+        User user = User.builder()
+            .email(request.email())
+            .password(passwordEncoder.encode(request.password()))
+            .build();
+
+        return userRepository.save(user);
+    }
+}
+```
+
+[.notes]
+--
+AI generates context-aware documentation
+--
+
+=== Generated JavaDoc
+
+```java
+/**
+ * Service for managing user accounts and authentication.
+ * Handles user registration, validation, and password encryption.
+ *
+ * @author AI-Generated
+ * @version 1.0
+ */
+public class UserService {
+
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
+
+    /**
+     * Creates a new user account with encrypted password.
+     *
+     * @param request the user registration details including email and password
+     * @return the newly created user with generated ID
+     * @throws ValidationException if request fails validation
+     * @throws DuplicateEmailException if email already exists
+     */
+    public User createUser(UserRegistrationRequest request) {
+        validateRequest(request);
+
+        User user = User.builder()
+            .email(request.email())
+            .password(passwordEncoder.encode(request.password()))
+            .build();
+
+        return userRepository.save(user);
+    }
+}
+```
+
+**Always Review:** AI may make assumptions about exceptions
+
+[.notes]
+--
+Good starting point, but verify accuracy
+Especially check exception documentation
+--
+
+=== Explaining Complex Code
+
+**Use Case:** Understanding algorithmic code
+
+```java
+// Chat: "Explain this algorithm in simple terms"
+public List<Integer> findPrimes(int limit) {
+    boolean[] isPrime = new boolean[limit + 1];
+    Arrays.fill(isPrime, true);
+    isPrime[0] = isPrime[1] = false;
+
+    for (int i = 2; i * i <= limit; i++) {
+        if (isPrime[i]) {
+            for (int j = i * i; j <= limit; j += i) {
+                isPrime[j] = false;
+            }
+        }
+    }
+
+    List<Integer> primes = new ArrayList<>();
+    for (int i = 2; i <= limit; i++) {
+        if (isPrime[i]) {
+            primes.add(i);
+        }
+    }
+    return primes;
+}
+```
+
+[.notes]
+--
+AI excellent at explaining algorithms
+Helps with code comprehension and maintenance
+--
+
+=== Copilot's Explanation
+
+```
+This is the Sieve of Eratosthenes algorithm for finding prime numbers.
+
+How it works:
+1. Creates a boolean array assuming all numbers are prime
+2. Marks 0 and 1 as not prime
+3. For each number i starting from 2:
+   - If i is still marked as prime
+   - Mark all multiples of i (starting from i²) as not prime
+4. Collects all numbers still marked as prime
+
+Example for limit=10:
+- Start: [F,F,T,T,T,T,T,T,T,T,T] (2-10 are "prime")
+- After i=2: [F,F,T,T,T,F,T,F,T,F,T] (4,6,8,10 marked not prime)
+- After i=3: [F,F,T,T,T,F,T,F,T,F,T] (6,9 already marked)
+- Result: [2,3,5,7] are prime
+
+Time Complexity: O(n log log n)
+Space Complexity: O(n)
+
+This is more efficient than checking each number individually.
+```
+
+[.notes]
+--
+AI provides educational explanations
+Helps team members learn from each other's code
+--
+
+=== Generating README Files
+
+**Pattern: Project Documentation**
+
+```
+Chat: "Generate a README.md for this Spring Boot project.
+Include:
+- Project description
+- Prerequisites (Java 21, Maven)
+- How to run locally
+- How to run tests
+- API endpoints overview
+- Environment variables needed
+- Contributing guidelines"
+```
+
+**Result:** Comprehensive project documentation
+
+[.notes]
+--
+AI saves hours on documentation
+Always customize generated content
+--
+
+=== Code Comments: When and How
+
+**Good Comments (AI Can Help Generate):**
+
+```java
+/**
+ * Calculates compound interest using the formula: A = P(1 + r/n)^(nt)
+ * where A = final amount, P = principal, r = rate, n = compounds/year, t = years
+ */
+public BigDecimal calculateCompoundInterest(
+    BigDecimal principal,
+    BigDecimal rate,
+    int compoundsPerYear,
+    int years) {
+    // Implementation
+}
+```
+
+**Bad Comments (AI Might Generate These):**
+
+```java
+// Gets the user  ← Obvious from method name
+public User getUser(Long id) { ... }
+
+// Loop through orders  ← Obvious from code
+for (Order order : orders) { ... }
+```
+
+**Best Practice:** Comment "why", not "what"
+
+[.notes]
+--
+AI tends to over-comment; prune unnecessary ones
+--
